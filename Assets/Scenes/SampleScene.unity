@@ -131,8 +131,8 @@ GameObject:
   m_Component:
   - component: {fileID: 500130803}
   - component: {fileID: 500130802}
-  - component: {fileID: 500130805}
   - component: {fileID: 500130804}
+  - component: {fileID: 500130805}
   m_Layer: 0
   m_Name: Square (4)
   m_TagString: Untagged
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 500130801}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c396e82bb03d7142b78cd6b45b23402, type: 3}
+  m_Script: {fileID: 11500000, guid: c15c7bf8870cc9d4e8582f0c841af0c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Square: {fileID: 500130803}
@@ -432,7 +432,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -662,7 +662,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 980363817}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3520bad0024e0cc4189c2ed7f2b985fb, type: 3}
+  m_Script: {fileID: 11500000, guid: c15c7bf8870cc9d4e8582f0c841af0c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Square: {fileID: 980363819}
@@ -849,8 +849,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155507663}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.305, y: 4.19, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.3050013, y: 4.19, z: 0}
   m_LocalScale: {x: 3.089, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -865,7 +865,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1155507663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4392c1f35243c740890712601027d23, type: 3}
+  m_Script: {fileID: 11500000, guid: c15c7bf8870cc9d4e8582f0c841af0c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Square: {fileID: 1155507665}
@@ -987,7 +987,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1849240071}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b8ad4a7e6855d04fa587f9951192bec, type: 3}
+  m_Script: {fileID: 11500000, guid: c15c7bf8870cc9d4e8582f0c841af0c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Square: {fileID: 1849240073}

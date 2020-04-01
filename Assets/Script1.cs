@@ -5,42 +5,38 @@ using UnityEngine;
 public class Script1 : MonoBehaviour
 {
     public Transform Square;
-    float x;
-    float y;
+    Renderer m_Renderer;
 
-
-
-    void Start()
+    void Start() 
     {
-
-
-
-
+        m_Renderer = GetComponent<Renderer>();
+        Debug.Log(Square.position.x);
     }
-
-
-
-
 
     void Update()
     {
-        /*
-        x = Input.mousePosition.x;
-        y = Input.mousePosition.y;
-       
-        if (x >= Square.position.x &&
-            x <= Square.position.x
-            && y >= Square.position.y &&
-            y <= Square.position.y)
+        if (Input.touchCount > 0)
         {
-            Debug.Log(Square.position.x);
+            Touch touch = Input.GetTouch(0);
+
+            Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
+
+            float touchX = touchPosition.x;
+            float touchY = touchPosition.y;
+
+            if (touchX >= Square.position.x &&
+                touchX <= Square.position.x + Square.localScale.x &&
+                touchY >= Square.position.y &&
+                touchY <= Square.position.y + Square.localScale.y)
+
+            {
+                m_Renderer.material.color = Color.red;
+            }
+
+            else
+            {
+                m_Renderer.material.color = Color.white;
+            }
         }
-
-       */
-    }
-
-    void OnMouseDown()
-    {
-        Debug.Log(Square.position.x);
     }
 }
