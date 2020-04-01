@@ -7,6 +7,7 @@ public class Script1 : MonoBehaviour
     public Transform Square;
     float x;
     float y;
+    bool mouseDown = false;
 
 
 
@@ -19,7 +20,15 @@ public class Script1 : MonoBehaviour
     }
 
 
+    void OnGUI()
+    {
 
+        if (mouseDown)
+        {
+            GUI.Label(new Rect(10, 10, 100, 100), "Hier worden alle rode blokjes neergelegd");
+        }
+
+    }
 
 
     void Update()
@@ -39,8 +48,17 @@ public class Script1 : MonoBehaviour
        */
     }
 
-    void OnMouseDown()
+    void OnMouseOver()
     {
-        Debug.Log(Square.position.x);
+        mouseDown = true;
+        
     }
+
+    void OnMouseExit()
+    {
+        mouseDown = false;
+
+    }
+
+
 }

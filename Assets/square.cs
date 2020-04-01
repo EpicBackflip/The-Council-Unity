@@ -2,24 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class square : MonoBehaviour
 {
     public Transform Square;
-    float x; 
+    float x;
     float y;
-   
-   
+    bool mouseDown = false;
+
+
 
     void Start()
     {
-       
-        
+
+
 
 
     }
 
 
+    void OnGUI()
+    {
 
+        if (mouseDown)
+        {
+            GUI.Label(new Rect(10, 10, 100, 100), "Hier worden alle groene blokjes neergelegd");
+        }
+
+    }
 
 
     void Update()
@@ -39,9 +49,19 @@ public class square : MonoBehaviour
        */
     }
 
-    void OnMouseDown()
+    void OnMouseOver()
     {
-        Debug.Log(Square.position.x);
+        mouseDown = true;
+
     }
+
+    void OnMouseExit()
+    {
+        mouseDown = false;
+
+    }
+
+
+
 
 }

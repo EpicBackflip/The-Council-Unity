@@ -7,6 +7,7 @@ public class Square2Script : MonoBehaviour
     public Transform Square;
     float x;
     float y;
+    bool mouseDown = false;
 
 
 
@@ -19,7 +20,15 @@ public class Square2Script : MonoBehaviour
     }
 
 
+    void OnGUI()
+    {
 
+        if (mouseDown)
+        {
+            GUI.Label(new Rect(10, 10, 100, 100), "Hier worden de bankrun fiches neergelegd");
+        }
+
+    }
 
 
     void Update()
@@ -39,8 +48,15 @@ public class Square2Script : MonoBehaviour
        */
     }
 
-    void OnMouseDown()
+    void OnMouseOver()
     {
-        Debug.Log(Square.position.x);
+        mouseDown = true;
+
+    }
+
+    void OnMouseExit()
+    {
+        mouseDown = false;
+
     }
 }
