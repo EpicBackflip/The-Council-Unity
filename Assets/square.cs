@@ -30,7 +30,7 @@ public class square : MonoBehaviour
             && y >= Square.position.y &&
             y <= Square.position.y)
         {
-            
+            Square.position.x += 10;
         }
 
     }
