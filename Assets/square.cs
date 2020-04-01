@@ -5,7 +5,7 @@ using UnityEngine;
 public class square : MonoBehaviour
 {
     public Transform Square;
-
+    
     float x; 
     float y;
 
@@ -23,6 +23,7 @@ public class square : MonoBehaviour
 
     void Update()
     {
+       
          x = Input.mousePosition.x;
         y = Input.mousePosition.y;
         if (x >= Square.position.x &&
@@ -30,7 +31,7 @@ public class square : MonoBehaviour
             && y >= Square.position.y &&
             y <= Square.position.y)
         {
-            Square.position.x += 10;
+            print("yes");
         }
 
     }
