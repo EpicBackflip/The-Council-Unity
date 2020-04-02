@@ -8,13 +8,16 @@ public class Script3Square : MonoBehaviour
     float x;
     float y;
     bool mouseDown = false;
-
+    public Color basicColor = Color.white;
+    public Color hoverColor = Color.cyan;
+    public Renderer renderer;
 
 
     void Start()
     {
 
-
+        renderer = GetComponent<Renderer>();
+        renderer.material.color = basicColor;
 
 
     }
@@ -47,15 +50,16 @@ public class Script3Square : MonoBehaviour
 
        */
     }
-
     void OnMouseOver()
     {
+        renderer.material.color = hoverColor;
         mouseDown = true;
 
     }
 
     void OnMouseExit()
     {
+        renderer.material.color = basicColor;
         mouseDown = false;
 
     }

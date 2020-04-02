@@ -243,6 +243,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Square: {fileID: 500130803}
+  basicColor: {r: 1, g: 1, b: 1, a: 1}
+  hoverColor: {r: 0.95686275, g: 0.98039216, b: 0.6156863, a: 1}
+  renderer: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,6 +491,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Square: {fileID: 554757020}
+  basicColor: {r: 1, g: 1, b: 1, a: 1}
+  hoverColor: {r: 0.95686275, g: 0.98039216, b: 0.6156863, a: 1}
+  renderer: {fileID: 0}
 --- !u!61 &554757022
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -610,6 +616,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Square: {fileID: 710622955}
+  basicColor: {r: 1, g: 1, b: 1, a: 1}
+  hoverColor: {r: 0.9552957, g: 0.9811321, b: 0.61552155, a: 1}
+  renderer: {fileID: 0}
 --- !u!61 &710622958
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -732,6 +741,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Square: {fileID: 980363819}
+  basicColor: {r: 1, g: 1, b: 1, a: 1}
+  hoverColor: {r: 0.95686275, g: 0.98039216, b: 0.6156863, a: 1}
+  renderer: {fileID: 0}
 --- !u!61 &980363821
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -935,6 +947,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Square: {fileID: 1155507665}
+  basicColor: {r: 1, g: 1, b: 1, a: 1}
+  hoverColor: {r: 0.95686275, g: 0.98039216, b: 0.6156863, a: 1}
+  renderer: {fileID: 0}
 --- !u!61 &1155507667
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1057,6 +1072,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Square: {fileID: 1849240073}
+  basicColor: {r: 1, g: 1, b: 1, a: 1}
+  hoverColor: {r: 0.95686275, g: 0.98039216, b: 0.6156863, a: 1}
+  renderer: {fileID: 0}
 --- !u!61 &1849240075
 BoxCollider2D:
   m_ObjectHideFlags: 0

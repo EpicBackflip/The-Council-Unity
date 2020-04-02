@@ -8,14 +8,17 @@ public class Square2Script : MonoBehaviour
     float x;
     float y;
     bool mouseDown = false;
-
+    public Color basicColor = Color.white;
+    public Color hoverColor = Color.cyan;
+    public Renderer renderer;
 
 
     void Start()
     {
 
 
-
+        renderer = GetComponent<Renderer>();
+        renderer.material.color = basicColor;
 
     }
 
@@ -47,15 +50,16 @@ public class Square2Script : MonoBehaviour
 
        */
     }
-
     void OnMouseOver()
     {
+        renderer.material.color = hoverColor;
         mouseDown = true;
 
     }
 
     void OnMouseExit()
     {
+        renderer.material.color = basicColor;
         mouseDown = false;
 
     }
