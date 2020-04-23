@@ -4,27 +4,25 @@ using UnityEngine;
 
 public class eventCard : MonoBehaviour
 {
-    public float sec = 14f;
- 
+    public float sec = 1000f;
+
+   
     void Start()
     {
-        if (gameObject.activeInHierarchy) {
-            gameObject.SetActive(false);
-        }
 
-
-        CancelInvoke();
-
+        
 
     }
 
     void Update()
     {
+        Debug.Log(sec);
         sec--;
         if(sec <= 0)
         {
-           // StartCoroutine(LateCall());
-            gameObject.SetActive(true);
+            this.GetComponent<Renderer>().material.color = new Color(255.0f, 255.0f, 255.0f, 1.0f);
+
+
         }
 
     }
