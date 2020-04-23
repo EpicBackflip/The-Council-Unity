@@ -37,11 +37,17 @@ public static class Loader
             sceneToLoad = scene.buildIndex + 1;
         }
 
-        if(dir == playDirections.Previous)
+        if (dir == playDirections.Previous)
         {
             sceneToLoad = scene.buildIndex - 1; 
         }
 
-        SceneManager.LoadScene(sceneToLoad); 
+        if (sceneToLoad >= SceneManager.sceneCountInBuildSettings || sceneToLoad <= 0)
+        {
+            Debug.Log("Scene at buildIndex: " + sceneToLoad + " does not exist.");
+            return; 
+        }
+
+        SceneManager.LoadScene(sceneToLoad);
     }
 }
