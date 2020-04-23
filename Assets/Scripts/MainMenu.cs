@@ -7,16 +7,12 @@ public class MainMenu : MonoBehaviour
 {
 public void Playgame()
     {
-
-
-        SceneManager.LoadScene(2);
+        Loader.Load(Loader.Scenes.inGame);
 
     }
 public void Tutorial()
     {
-
-
-        SceneManager.LoadScene(1);
+        Loader.Load(Loader.Scenes.tutorial);
     }
 
 public void Quit()
