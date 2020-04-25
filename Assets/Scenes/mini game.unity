@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3550e24023afdb64eb403d8b2ce75c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: {fileID: 368745640}
   movementSpeed: 5
 --- !u!95 &50372655
 Animator:
@@ -296,6 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3550e24023afdb64eb403d8b2ce75c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: {fileID: 368745640}
   movementSpeed: 5
 --- !u!95 &51782346
 Animator:
@@ -439,6 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3550e24023afdb64eb403d8b2ce75c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: {fileID: 368745640}
   movementSpeed: 5
 --- !u!95 &70018707
 Animator:
@@ -725,8 +728,9 @@ GameObject:
   - component: {fileID: 368745637}
   - component: {fileID: 368745639}
   - component: {fileID: 368745638}
+  - component: {fileID: 368745640}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -776,7 +780,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 5
     m_MaxSize: 50
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -791,6 +795,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368745636}
   m_CullTransparentMesh: 0
+--- !u!114 &368745640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368745636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8bb190593519644b5ef4b1ae43e456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 368745638}
+  CoinScore: 0
 --- !u!1 &618097994
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,6 +841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3550e24023afdb64eb403d8b2ce75c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: {fileID: 368745640}
   movementSpeed: 5
 --- !u!95 &618097996
 Animator:
@@ -1032,6 +1051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3550e24023afdb64eb403d8b2ce75c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: {fileID: 368745640}
   movementSpeed: 5
 --- !u!95 &1014902135
 Animator:
@@ -1191,7 +1211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1274,6 +1294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3550e24023afdb64eb403d8b2ce75c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: {fileID: 368745640}
   movementSpeed: 5
 --- !u!61 &1657348105
 BoxCollider2D:

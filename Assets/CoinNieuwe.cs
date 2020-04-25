@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CoinNieuwe : MonoBehaviour
 {
-  
+    public Score score;
     public  float movementSpeed = 5f;
 
 
@@ -42,7 +43,9 @@ public class CoinNieuwe : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("hit");
+        score.CoinScore++;
         Reset();
+
         /*
         if(col.gameObject.name == "coinBank")
         {
