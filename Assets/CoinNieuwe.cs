@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CoinNieuwe : MonoBehaviour
 {
-  
+    public Score score;
     public  float movementSpeed = 5f;
 
 
@@ -19,7 +20,7 @@ public class CoinNieuwe : MonoBehaviour
     {
        
         float inputY = Input.GetAxis("Vertical");
-        Debug.Log(inputY);
+        
         transform.position = transform.position + new Vector3(0, inputY - movementSpeed * Time.deltaTime, 0);
         //transform.position.y += inputY * movementSpeed * Time.deltaTime;
 
@@ -37,5 +38,22 @@ public class CoinNieuwe : MonoBehaviour
     {
        
         transform.position = new Vector3(Random.Range(-13, 12), Random.Range(10, 15), transform.position.z);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("hit");
+        score.CoinScore++;
+        Reset();
+
+        /*
+        if(col.gameObject.name == "coinBank")
+        {
+            Debug.Log("check");
+            Reset();
+
+        }
+        */
+
     }
 }
