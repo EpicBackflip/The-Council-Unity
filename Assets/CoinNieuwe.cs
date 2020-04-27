@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class CoinNieuwe : MonoBehaviour
 {
     public Score score;
+    public SchuldInput schuldinput;
     public  float movementSpeed = 5f;
 
 
@@ -18,7 +19,7 @@ public class CoinNieuwe : MonoBehaviour
     }
     public void Update()
     {
-       
+        
         float inputY = Input.GetAxis("Vertical");
         
         transform.position = transform.position + new Vector3(0, inputY - movementSpeed * Time.deltaTime, 0);
@@ -40,10 +41,11 @@ public class CoinNieuwe : MonoBehaviour
         transform.position = new Vector3(Random.Range(-13, 12), Random.Range(10, 15), transform.position.z);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("hit");
-        score.CoinScore++;
+        score.CoinScore--;
+        
         Reset();
 
         /*

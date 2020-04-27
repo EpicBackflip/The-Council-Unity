@@ -13,8 +13,11 @@ public static class Loader
         tutorial,
         menu,
         inGame,
-        Chapter_1,
         Chapter_2,
+        Chapter_3,
+        Chapter_4,
+        MiniGameOver,
+        MiniGame,
     };
 
     public enum playDirections
