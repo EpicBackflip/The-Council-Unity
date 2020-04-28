@@ -17,20 +17,12 @@ public class SchuldInput : MonoBehaviour
         //mainInputField.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
         StringInput = PlayerPrefs.GetString("tutorialTextKeyName");
         mainInputField.text = StringInput;
-        Input = int.Parse(StringInput);
         Debug.Log(mainInputField.text);
 
 
     }
 
-    // Invoked when the value of the text field changes.
-    
-    public void ValueChangeCheck()
-    {
-       
-        StringInput = mainInputField.text;
-        
-    }
+
 
     public void Savethis()
     {

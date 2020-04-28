@@ -19,12 +19,18 @@ public class Score : MonoBehaviour
         //scoreText.text = schuldinput.StringInput;
         schuldinput.StringInput = PlayerPrefs.GetString("tutorialTextKeyName");
         schuldinput.mainInputField.text = schuldinput.StringInput;
-        schuldinput.Input = int.Parse(schuldinput.StringInput);
+
         //scoreText.text = schuldinput.mainInputField.text;
-        CoinScore = schuldinput.Input;
+        if (CoinScore == int.Parse(schuldinput.mainInputField.text))
+        {
+            Loader.Load(Loader.Scenes.Win);
+            Debug.Log("Win");
+        }
+       
+        
         //CoinScore = int.Parse(schuldinput.mainInputField.text);
         scoreText.text = CoinScore.ToString();
-        Debug.Log(CoinScore);
+        //Debug.Log(CoinScore);
 
 
 

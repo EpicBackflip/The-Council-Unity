@@ -44,7 +44,7 @@ public class CoinNieuwe : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("hit");
-        score.CoinScore--;
+        score.CoinScore++;
         
         Reset();
 

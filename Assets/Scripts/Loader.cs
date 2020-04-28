@@ -18,6 +18,7 @@ public static class Loader
         Chapter_4,
         MiniGameOver,
         MiniGame,
+        Win,
     };
 
     public enum playDirections
