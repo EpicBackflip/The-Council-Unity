@@ -27,6 +27,6 @@ public class Coin : MonoBehaviour
         transform.position = new Vector3(Random.Range(-13, 12), Random.Range(10, 15), transform.position.z);
        
         //RB.gravityScale = 0.1f;
-       //RB.velocity = new Vector2(0, 0.5f);
+        //RB.velocity = new Vector2(0, 0.5f);
     }
 }

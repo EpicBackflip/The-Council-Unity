@@ -26,14 +26,9 @@ public class Score : MonoBehaviour
             Loader.Load(Loader.Scenes.Win);
             Debug.Log("Win");
         }
-       
         
         //CoinScore = int.Parse(schuldinput.mainInputField.text);
         scoreText.text = CoinScore.ToString();
         //Debug.Log(CoinScore);
-
-
-
-
     }
 }
