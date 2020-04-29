@@ -1717,7 +1717,6 @@ MonoBehaviour:
     type: 3}
   schuldText: {fileID: 2110175552}
   score: {fileID: 368745640}
-  newCoin: {fileID: 0}
 --- !u!114 &2110175552
 MonoBehaviour:
   m_ObjectHideFlags: 0
