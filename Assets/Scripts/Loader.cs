@@ -19,6 +19,7 @@ public static class Loader
         MiniGameOver,
         MiniGame,
         Win,
+        SchuldInput,
     };
 
     public enum playDirections

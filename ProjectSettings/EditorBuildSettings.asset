@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Win.unity
     guid: 8da6a9dba60755340be203a46653c9d8
+  - enabled: 1
+    path: Assets/Scenes/SchuldInput.unity
+    guid: f45fe4f4ac5d89e4786544782d761d0b
   m_configObjects: {}

@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
 public void Playgame()
     {
-        Loader.Load(Loader.Scenes.inGame);
+        Loader.Load(Loader.Scenes.SchuldInput);
 
     }
 public void Tutorial()
