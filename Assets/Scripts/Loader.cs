@@ -16,8 +16,9 @@ public static class Loader
         Chapter_2,
         Chapter_3,
         Chapter_4,
-        MiniGameOver,
+        SchuldInput,
         MiniGame,
+        MiniGameOver,
         Win,
     };
 
