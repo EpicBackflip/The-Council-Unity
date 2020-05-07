@@ -12,7 +12,7 @@ public void Playgame()
     }
 public void Tutorial()
     {
-        Loader.Load(Loader.Scenes.tutorial);
+        Loader.Load(Loader.Scenes.Chapter_2);
     }
 
 public void Quit()
