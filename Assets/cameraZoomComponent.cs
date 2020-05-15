@@ -5,19 +5,32 @@ using UnityEngine;
 public class cameraZoomComponent : MonoBehaviour
 {
     public Camera cam;
-    private float targetZoom;
-    private float zoomFactor = 80f;
-    [SerializeField] private float zoomLerpSpeed = 10f;
 
-    void Start()
+    //The default size of the camera
+    private float baseCameraSize = 257.8812f; 
+
+    //The amount we zoom
+    public float zoomFactor;
+
+    //Defines the idle position and the position of the zoom
+    public Vector3[] target;
+    public bool isZoomActive;
+
+    //The rate of zoom
+    public float zoomSpeed;
+
+    public void LateUpdate()
     {
-        targetZoom = cam.orthographicSize; 
-    }
-    void Update()
-    {
-        float scrollData = Input.GetAxis("Mouse ScrollWheel");    
-        targetZoom -= scrollData * zoomFactor;
-        targetZoom = Mathf.Clamp(targetZoom, 40f, 263f); 
-        cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetZoom, Time.deltaTime * zoomLerpSpeed);
+        if (isZoomActive)
+        {
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, zoomFactor, zoomSpeed);
+            cam.transform.position = Vector3.Lerp(cam.transform.position, target[0], zoomSpeed); 
+        }
+        else
+        {
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, baseCameraSize, zoomSpeed);
+            cam.transform.position = Vector3.Lerp(cam.transform.position, target[1], zoomSpeed);
+        }
+
     }
 }

@@ -15,14 +15,14 @@ EditorBuildSettings:
     path: Assets/Scenes/inGame.unity
     guid: 0e17943d61afcf148b976e445d133661
   - enabled: 1
-    path: Assets/Scenes/Chapter_2.unity
-    guid: b348255e65aa9924c9377b7ca753a028
+    path: Assets/Scenes/Chapter_1.unity
+    guid: eb03034817767fa42b940a6c3fdf7d5f
   - enabled: 1
-    path: Assets/Scenes/Chapter_3.unity
+    path: Assets/Scenes/Chapter_2.unity
     guid: f0047abbd1ba7fa488fbe9cb7c764802
   - enabled: 1
-    path: Assets/Scenes/Chapter_4.unity
-    guid: 94f5bf914bd2c2545beae131bdcd2af4
+    path: Assets/Scenes/Chapter_3.unity
+    guid: 05fc747b5c57b6e4480975a584cb6d59
   - enabled: 1
     path: Assets/Scenes/SchuldInput.unity
     guid: f45fe4f4ac5d89e4786544782d761d0b

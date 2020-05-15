@@ -18,12 +18,7 @@ public class SchuldInput : MonoBehaviour
         StringInput = PlayerPrefs.GetString("tutorialTextKeyName");
         mainInputField.text = StringInput;
         Debug.Log(mainInputField.text);
-
-
     }
-
-
-
     public void Savethis()
     {
        
