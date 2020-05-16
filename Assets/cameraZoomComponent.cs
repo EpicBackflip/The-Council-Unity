@@ -5,9 +5,9 @@ using UnityEngine;
 public class cameraZoomComponent : MonoBehaviour
 {
     public Camera cam;
+    public SpriteRenderer board; 
 
-    //The default size of the camera
-    private float baseCameraSize = 257.8812f; 
+    private float baseCameraSize;
 
     //The amount we zoom
     public float zoomFactor;
@@ -19,6 +19,21 @@ public class cameraZoomComponent : MonoBehaviour
     //The rate of zoom
     public float zoomSpeed;
 
+    public void Start()
+    {
+        float screenRatio = (float)Screen.width / Screen.height;
+        float targetRatio = board.bounds.size.x / board.bounds.size.y;
+
+        if (screenRatio >= targetRatio)
+        {
+            baseCameraSize = board.bounds.size.y / 2;
+        }
+        else
+        {
+            float difference = targetRatio / screenRatio;
+            baseCameraSize = board.bounds.size.y / 2 * difference; 
+        }
+    }
     public void LateUpdate()
     {
         if (isZoomActive)
@@ -31,6 +46,5 @@ public class cameraZoomComponent : MonoBehaviour
             cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, baseCameraSize, zoomSpeed);
             cam.transform.position = Vector3.Lerp(cam.transform.position, target[1], zoomSpeed);
         }
-
     }
 }
