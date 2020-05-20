@@ -18,6 +18,7 @@ public class SchuldText : MonoBehaviour
         schuldText.text = schuldinput.mainInputField.text;
 
         displaySchuld = int.Parse(schuldText.text);
+
         //totalScore = score.CoinScore;
     }
     void Update()

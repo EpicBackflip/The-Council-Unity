@@ -7,7 +7,13 @@ public class MainMenu : MonoBehaviour
 {
 public void Playgame()
     {
-        Loader.Load(Loader.Scenes.SchuldInput);
+        Loader.Load(Loader.Scenes.MiniGameUitleg);
+
+    }
+
+public void StartKnop()
+{
+    Loader.Load(Loader.Scenes.MiniGame);
 
     }
 public void Tutorial()
