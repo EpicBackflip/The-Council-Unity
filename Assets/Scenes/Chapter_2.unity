@@ -367,6 +367,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 465756910}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &465756912 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: -7418792992649668775, guid: 8966645cd1eaaa84e8731ac31a61cffa,
+    type: 3}
+  m_PrefabInstance: {fileID: 465756910}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &608733348
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,6 +1218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1651644549}
+  board: {fileID: 465756912}
   zoomFactor: 50
   target:
   - {x: 0, y: 0, z: -1}
