@@ -1223,5 +1223,5 @@ MonoBehaviour:
   target:
   - {x: 0, y: 0, z: -1}
   - {x: 0, y: 0, z: -1}
-  isZoomActive: 0
+  isZoomActive: 1
   zoomSpeed: 0.0225
