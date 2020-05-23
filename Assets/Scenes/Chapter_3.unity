@@ -1224,7 +1224,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1651644549}
   board: {fileID: 1128328246}
-  zoomFactor: 50
+  zoomInMargin: 0.001
+  zoomOutMargin: 1
+  targetIndex: 0
+  nextChapter: 0
   target:
   - {x: 0, y: 0, z: -1}
   - {x: 0, y: 0, z: -1}

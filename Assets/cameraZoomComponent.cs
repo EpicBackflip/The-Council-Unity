@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class cameraZoomComponent : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class cameraZoomComponent : MonoBehaviour
     public float zoomOutMargin;
 
     public int targetIndex;
+    public int nextChapter;
 
     private float baseCameraSize;
 
@@ -47,6 +49,13 @@ public class cameraZoomComponent : MonoBehaviour
         {
             isZoomActive = true;
             targetIndex++;
+
+            if (targetIndex >= target.Length)
+            {
+                SceneManager.LoadScene(nextChapter);
+
+                return;
+            }
         }
 
         if (isZoomActive)
