@@ -824,7 +824,7 @@ Camera:
   far clip plane: 1000
   field of view: 29.123503
   orthographic: 1
-  orthographic size: 257.88123
+  orthographic size: 284
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1219,9 +1219,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1651644549}
   board: {fileID: 465756912}
-  zoomFactor: 50
+  zoomInMargin: 0.001
+  zoomOutMargin: 1
+  targetIndex: 0
   target:
-  - {x: 0, y: 0, z: -1}
-  - {x: 0, y: 0, z: -1}
+  - {x: -425, y: 0, z: 255}
+  - {x: 425, y: 0, z: 255}
+  - {x: 0, y: 260, z: 240}
+  - {x: 0, y: -250, z: 225}
+  - {x: 0, y: -50, z: 200}
   isZoomActive: 0
   zoomSpeed: 0.0225

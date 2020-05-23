@@ -1,18 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using UnityEngine;
 
 public class cameraZoomComponent : MonoBehaviour
 {
     public Camera cam;
-    public SpriteRenderer board; 
+    public SpriteRenderer board;
+    public float zoomInMargin;
+    public float zoomOutMargin;
+
+    public int targetIndex;
 
     private float baseCameraSize;
 
-    //The amount we zoom
-    public float zoomFactor;
-
-    //Defines the idle position and the position of the zoom
+    //Defines the target positions and the amount of the zoom (Z)
     public Vector3[] target;
     public bool isZoomActive;
 
@@ -36,15 +38,26 @@ public class cameraZoomComponent : MonoBehaviour
     }
     public void LateUpdate()
     {
+        if(cam.orthographicSize < target[targetIndex].z + zoomInMargin)
+        {
+            isZoomActive = false;
+        }
+
+        if (!isZoomActive && cam.orthographicSize > baseCameraSize - zoomOutMargin)
+        {
+            isZoomActive = true;
+            targetIndex++;
+        }
+
         if (isZoomActive)
         {
-            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, zoomFactor, zoomSpeed);
-            cam.transform.position = Vector3.Lerp(cam.transform.position, target[0], zoomSpeed); 
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, target[targetIndex].z, zoomSpeed);
+            cam.transform.position = Vector3.Lerp(cam.transform.position, new Vector3(target[targetIndex].x, target[targetIndex].y, -1), zoomSpeed); 
         }
         else
         {
             cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, baseCameraSize, zoomSpeed);
-            cam.transform.position = Vector3.Lerp(cam.transform.position, target[1], zoomSpeed);
+            cam.transform.position = Vector3.Lerp(cam.transform.position, new Vector3(0,0,-1), zoomSpeed);
         }
     }
 }
