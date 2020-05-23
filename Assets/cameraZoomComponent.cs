@@ -18,7 +18,7 @@ public class cameraZoomComponent : MonoBehaviour
 
     //Defines the target positions and the amount of the zoom (Z)
     public Vector3[] target;
-    public bool isZoomActive;
+    private bool isZoomActive;
 
     //The rate of zoom
     public float zoomSpeed;
@@ -40,7 +40,10 @@ public class cameraZoomComponent : MonoBehaviour
     }
     public void LateUpdate()
     {
-        if(cam.orthographicSize < target[targetIndex].z + zoomInMargin)
+        if (targetIndex > target.Length - 1)
+            return;
+
+        if (cam.orthographicSize < target[targetIndex].z + zoomInMargin)
         {
             isZoomActive = false;
         }
@@ -58,7 +61,7 @@ public class cameraZoomComponent : MonoBehaviour
             }
         }
 
-        if (isZoomActive)
+        if (isZoomActive && targetIndex < target.Length)
         {
             cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, target[targetIndex].z, zoomSpeed);
             cam.transform.position = Vector3.Lerp(cam.transform.position, new Vector3(target[targetIndex].x, target[targetIndex].y, -1), zoomSpeed); 
