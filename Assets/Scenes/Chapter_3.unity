@@ -812,7 +812,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.2739854, g: 0.35311273, b: 0.4433962, a: 1}
+  m_BackGroundColor: {r: 0.6117647, g: 0.7254902, b: 0.34117648, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -829,7 +829,7 @@ Camera:
   far clip plane: 1000
   field of view: 29.123503
   orthographic: 1
-  orthographic size: 257.88123
+  orthographic size: 257
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1229,7 +1229,7 @@ MonoBehaviour:
   targetIndex: 0
   nextChapter: 0
   target:
-  - {x: 0, y: 0, z: -1}
-  - {x: 0, y: 0, z: -1}
-  isZoomActive: 0
+  - {x: 0, y: 0, z: 255}
+  - {x: 0, y: -50, z: 200}
+  - {x: 0, y: 0, z: 255}
   zoomSpeed: 0.0225
