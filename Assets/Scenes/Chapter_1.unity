@@ -1221,7 +1221,7 @@ MonoBehaviour:
   board: {fileID: 465756912}
   zoomInMargin: 0.001
   zoomOutMargin: 1
-  targetIndex: 1
+  targetIndex: 0
   target:
   - {x: -425, y: 0, z: 255}
   - {x: 425, y: 0, z: 255}
