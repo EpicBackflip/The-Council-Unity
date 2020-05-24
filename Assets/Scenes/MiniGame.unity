@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 50372654}
   - component: {fileID: 50372658}
   m_Layer: 0
-  m_Name: EUR_6x4_0 (14)
+  m_Name: Coin 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 51782345}
   - component: {fileID: 51782349}
   m_Layer: 0
-  m_Name: EUR_6x4_0 (13)
+  m_Name: Coin 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 70018706}
   - component: {fileID: 70018710}
   m_Layer: 0
-  m_Name: EUR_6x4_0 (10)
+  m_Name: Coin 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -574,7 +574,7 @@ GameObject:
   - component: {fileID: 258332843}
   - component: {fileID: 258332842}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: MainCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -656,7 +656,7 @@ GameObject:
   - component: {fileID: 360235460}
   - component: {fileID: 360235459}
   m_Layer: 0
-  m_Name: mini game background
+  m_Name: MiniGameBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,8 +720,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360235458}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.8313406, y: 0.6323069, z: 0.4484446}
+  m_LocalPosition: {x: -0.01, y: 0.56, z: 0}
+  m_LocalScale: {x: 0.64, y: 0.64, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -777,15 +777,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.40000004, g: 0.40000004, b: 0.40000004, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 50
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 5
     m_MaxSize: 50
@@ -795,7 +796,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Score
+  m_Text: SCORE
 --- !u!222 &368745639
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -832,7 +833,7 @@ GameObject:
   - component: {fileID: 552760465}
   - component: {fileID: 552760464}
   m_Layer: 5
-  m_Name: timer
+  m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -886,6 +887,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -925,7 +927,7 @@ GameObject:
   - component: {fileID: 618097995}
   - component: {fileID: 618097999}
   m_Layer: 0
-  m_Name: EUR_6x4_0 (12)
+  m_Name: Coin 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1138,7 +1140,7 @@ GameObject:
   - component: {fileID: 1014902134}
   - component: {fileID: 1014902138}
   m_Layer: 0
-  m_Name: EUR_6x4_0 (11)
+  m_Name: Coin 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1385,7 +1387,7 @@ GameObject:
   - component: {fileID: 1657348104}
   - component: {fileID: 1657348105}
   m_Layer: 0
-  m_Name: EUR_6x4_0 (9)
+  m_Name: Coin 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1532,7 +1534,7 @@ GameObject:
   - component: {fileID: 1706539917}
   - component: {fileID: 1706539919}
   m_Layer: 0
-  m_Name: coinBank
+  m_Name: CoinBank
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
