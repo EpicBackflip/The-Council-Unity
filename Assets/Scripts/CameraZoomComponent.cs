@@ -15,6 +15,8 @@ public class CameraZoomComponent : MonoBehaviour
     public int nextChapter;
     public bool paused;
 
+    public ControlsTutorial controls; 
+
     private float baseCameraSize;
 
     //Defines the target positions and the amount of the zoom (Z)
@@ -41,7 +43,7 @@ public class CameraZoomComponent : MonoBehaviour
     }
     public void Update()
     {
-        if (paused)
+        if (paused || !controls.IsFinished)
         {
             return;
         }
