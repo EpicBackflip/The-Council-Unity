@@ -22,6 +22,18 @@ public class CoinBank : MonoBehaviour
 
         Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint);
            transform.position = curPosition;
+           if (transform.position.x >= 8)
+           {
+               transform.position = new Vector3(8, -3.63f, 0);
+        }
+
+           if (transform.position.x <= -8)
+           {
+               transform.position = new Vector3(-8, -3.63f, 0);
+           }
+    }
 
     }
-}
+
+
+

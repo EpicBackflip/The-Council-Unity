@@ -7,7 +7,7 @@ public class NewCoin : MonoBehaviour
 {
     public Score score;
     public SchuldInput schuldinput;
-    public  float movementSpeed = 5f;
+    public  float movementSpeed = 20f;
     public bool isHit; 
 
     // Update is called once per frame
@@ -33,7 +33,7 @@ public class NewCoin : MonoBehaviour
     public void Reset()
     {
         isHit = false; 
-        transform.position = new Vector3(Random.Range(-13, 12), Random.Range(10, 15), transform.position.z);
+        transform.position = new Vector3(Random.Range(-8, 8), Random.Range(30, 60), transform.position.z);
     }
 
     public void OnTriggerEnter2D(Collider2D other)

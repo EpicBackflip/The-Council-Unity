@@ -156,7 +156,7 @@ MonoBehaviour:
   score: {fileID: 368745640}
   schuldinput: {fileID: 1688787429808663375, guid: b348ca144b0ae0847ac12cf85e7ed06e,
     type: 3}
-  movementSpeed: 5
+  movementSpeed: 15
   isHit: 0
 --- !u!95 &50372655
 Animator:
@@ -303,7 +303,7 @@ MonoBehaviour:
   score: {fileID: 368745640}
   schuldinput: {fileID: 1688787429808663375, guid: b348ca144b0ae0847ac12cf85e7ed06e,
     type: 3}
-  movementSpeed: 5
+  movementSpeed: 15
   isHit: 0
 --- !u!95 &51782346
 Animator:
@@ -383,7 +383,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 51782344}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.27, y: 5.88, z: 0}
+  m_LocalPosition: {x: -9, y: 5.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -450,7 +450,7 @@ MonoBehaviour:
   score: {fileID: 368745640}
   schuldinput: {fileID: 1688787429808663375, guid: b348ca144b0ae0847ac12cf85e7ed06e,
     type: 3}
-  movementSpeed: 5
+  movementSpeed: 15
   isHit: 0
 --- !u!95 &70018707
 Animator:
@@ -530,7 +530,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70018705}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.69, y: 34.44, z: 0}
+  m_LocalPosition: {x: -1.9, y: 23.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -948,7 +948,7 @@ MonoBehaviour:
   score: {fileID: 368745640}
   schuldinput: {fileID: 1688787429808663375, guid: b348ca144b0ae0847ac12cf85e7ed06e,
     type: 3}
-  movementSpeed: 5
+  movementSpeed: 15
   isHit: 0
 --- !u!95 &618097996
 Animator:
@@ -1028,7 +1028,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618097994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.7, y: 44.24, z: 0}
+  m_LocalPosition: {x: 7.7, y: 48.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1161,7 +1161,7 @@ MonoBehaviour:
   score: {fileID: 368745640}
   schuldinput: {fileID: 1688787429808663375, guid: b348ca144b0ae0847ac12cf85e7ed06e,
     type: 3}
-  movementSpeed: 5
+  movementSpeed: 15
   isHit: 0
 --- !u!95 &1014902135
 Animator:
@@ -1408,7 +1408,7 @@ MonoBehaviour:
   score: {fileID: 368745640}
   schuldinput: {fileID: 1688787429808663375, guid: b348ca144b0ae0847ac12cf85e7ed06e,
     type: 3}
-  movementSpeed: 5
+  movementSpeed: 15
   isHit: 0
 --- !u!61 &1657348105
 BoxCollider2D:
@@ -1514,7 +1514,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1657348103}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.67, y: 16.45, z: 0}
+  m_LocalPosition: {x: -5.2, y: 59.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
