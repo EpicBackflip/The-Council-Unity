@@ -9,16 +9,10 @@ public static class Loader
     private static Action OnLoaderCallBack;
     public enum Scenes
     {
-        tutorial,
         menu,
-        inGame,
         Chapter_1,
-        Chapter_2,
-        Chapter_3,
-        SchuldInput,
         MiniGame,
         MiniGameOver,
-        Win,
         MiniGameUitleg
     };
 

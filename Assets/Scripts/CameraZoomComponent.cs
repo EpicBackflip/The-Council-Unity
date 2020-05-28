@@ -80,7 +80,7 @@ public class CameraZoomComponent : MonoBehaviour
 
         if (targetIndex >= target.Length)
         {
-            SceneManager.LoadScene(nextChapter);
+            Loader.Load(Loader.Scenes.menu);
         }
     }
 
