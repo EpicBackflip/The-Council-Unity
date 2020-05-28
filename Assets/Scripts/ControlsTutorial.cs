@@ -1,12 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ControlsTutorial : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class ControlsTutorial : MonoBehaviour
 {
     public Image[] panels;
+    public String[] descriptions;
+
+    public Text[] textToDisplay;
 
     Color tempColor = new Color(0,0,0,0);
 
@@ -22,15 +26,6 @@ public class ControlsTutorial : MonoBehaviour, IPointerEnterHandler, IPointerExi
         get { return isFinished;  }
     }
 
-    public void OnPointerEnter(PointerEventData pointerEventData)
-    {
-        Debug.Log("Cursor Entering " + name + " GameObject");
-    }
-    public void OnPointerExit(PointerEventData pointerEventData)
-    {
-        Debug.Log("Cursor Exiting " + name + " GameObject");
-    }
-
     void Start()
     {
         isFinished = false; 
@@ -40,6 +35,9 @@ public class ControlsTutorial : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         if (blinkCount == 2)
         {
+            if(index < descriptions.Length)
+                textToDisplay[index].text = String.Empty;
+
             index++;
             blinkCount = 0;
         }
@@ -65,6 +63,7 @@ public class ControlsTutorial : MonoBehaviour, IPointerEnterHandler, IPointerExi
         if (index < panels.Length)
         {
             panels[index].color = tempColor;
+            textToDisplay[index].text = descriptions[index]; 
         }
         else
         {

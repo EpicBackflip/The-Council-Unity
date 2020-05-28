@@ -86,7 +86,7 @@ public class CameraZoomComponent : MonoBehaviour
         float height = cam.orthographicSize * 2;
         float width = height * screenRatio; 
 
-        navParent.transform.localScale = Vector3.one * height / 600f;
+        navParent.transform.localScale = Vector3.one * height / 525f;
     }
 
     public void NextTarget()
