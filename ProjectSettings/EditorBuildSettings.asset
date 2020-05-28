@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Chapter_1.unity
     guid: eb03034817767fa42b940a6c3fdf7d5f
   - enabled: 1
-    path: Assets/Scenes/inGame.unity
-    guid: 0e17943d61afcf148b976e445d133661
-  - enabled: 1
     path: Assets/Scenes/MiniGameUitleg.unity
     guid: 017ffed59b02a1d45bfaf5315d06438c
   - enabled: 1

@@ -6,10 +6,14 @@ using UnityEngine;
 public class NavigationManager : MonoBehaviour
 {
     public CameraZoomComponent zoom;
+    public ControlsTutorial controls; 
     public Previous previous;
 
     public void Back()
     {
+        if(!checkIfCanProceed())
+            return;
+
         var goToPreviousScene = zoom.PreviousTarget();
 
         if (goToPreviousScene)
@@ -20,11 +24,26 @@ public class NavigationManager : MonoBehaviour
 
     public void Pause()
     {
+        if (!checkIfCanProceed())
+            return;
+
         zoom.paused = !zoom.paused;
     }
 
     public void Next()
     {
+        if (!checkIfCanProceed())
+            return;
+
         zoom.NextTarget();
+    }
+
+    //If the tutorial for the controls is still playing, we dont want the player to skip, pause or return. 
+    private bool checkIfCanProceed()
+    {
+        if (!controls.IsFinished)
+            return false;
+
+        return true; 
     }
 }

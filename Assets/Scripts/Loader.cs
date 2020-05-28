@@ -6,14 +6,13 @@ using UnityEngine.SceneManagement;
 
 public static class Loader
 {
-    private static Action OnLoaderCallBack;
     public enum Scenes
     {
         menu,
         Chapter_1,
         MiniGame,
         MiniGameOver,
-        MiniGameUitleg
+        MiniGameUitleg,
     };
 
     public enum playDirections

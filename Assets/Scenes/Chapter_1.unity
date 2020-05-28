@@ -278,6 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoom: {fileID: 2088213700}
+  controls: {fileID: 1475641408}
   previous: {fileID: 1431196544}
 --- !u!114 &338583581
 MonoBehaviour:
