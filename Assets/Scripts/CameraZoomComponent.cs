@@ -10,6 +10,7 @@ public class CameraZoomComponent : MonoBehaviour
     public SpriteRenderer board;
     public float zoomInMargin;
     public float zoomOutMargin;
+   
 
     public int targetIndex;
     public int nextChapter;
@@ -45,6 +46,7 @@ public class CameraZoomComponent : MonoBehaviour
     {
         if (paused || !controls.IsFinished)
         {
+            
             return;
         }
 
