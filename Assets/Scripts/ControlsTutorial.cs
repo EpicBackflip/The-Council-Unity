@@ -12,19 +12,20 @@ public class ControlsTutorial : MonoBehaviour
     Color tempColor = new Color(0,0,0,0);
 
     public float maxOpacityChange = 0.45f;
-
     public float changeRate = 0.02f;
-
     int blinkCount;
 
     private int index;
-
     private static bool isFinished;
-
     private bool hasBlinked; 
     public bool IsFinished
     {
         get { return isFinished;  }
+    }
+
+    void Start()
+    {
+        isFinished = false; 
     }
 
     void Update()
@@ -40,7 +41,7 @@ public class ControlsTutorial : MonoBehaviour
             tempColor.a += changeRate;
 
             if (tempColor.a >= maxOpacityChange)
-                hasBlinked = true; 
+                hasBlinked = true;
         }
         else
         {
@@ -48,8 +49,8 @@ public class ControlsTutorial : MonoBehaviour
 
             if (tempColor.a <= 0f)
             {
-                hasBlinked = false; 
-                blinkCount++; 
+                hasBlinked = false;
+                blinkCount++;
             }
         }
 
@@ -59,7 +60,7 @@ public class ControlsTutorial : MonoBehaviour
         }
         else
         {
-            isFinished = true; 
+            isFinished = true;
         }
     }
 }
