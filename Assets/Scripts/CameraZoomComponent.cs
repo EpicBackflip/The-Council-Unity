@@ -11,6 +11,11 @@ public class CameraZoomComponent : MonoBehaviour
     public float zoomInMargin;
     public float zoomOutMargin;
 
+    public GameObject navParent;
+    private Vector3 scaleChange;
+    public float parentX;
+    public float parentY; 
+
     public int targetIndex;
     public int nextChapter;
     public bool paused;
@@ -18,6 +23,7 @@ public class CameraZoomComponent : MonoBehaviour
     public ControlsTutorial controls; 
 
     private float baseCameraSize;
+    private float screenRatio;
 
     //Defines the target positions and the amount of the zoom (Z)
     public Vector3[] target;
@@ -27,8 +33,11 @@ public class CameraZoomComponent : MonoBehaviour
     public float zoomSpeed;
 
     public void Start()
-    {
-        float screenRatio = (float)Screen.width / Screen.height;
+    { 
+        parentX = navParent.transform.localScale.x;
+        parentY = navParent.transform.localScale.y;
+
+        screenRatio = (float)Screen.width / Screen.height;
         float targetRatio = board.bounds.size.x / board.bounds.size.y;
 
         if (screenRatio >= targetRatio)
@@ -64,13 +73,18 @@ public class CameraZoomComponent : MonoBehaviour
         if (isZoomActive && targetIndex < target.Length)
         {
             cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, target[targetIndex].z, zoomSpeed);
-            cam.transform.position = Vector3.Lerp(cam.transform.position, new Vector3(target[targetIndex].x, target[targetIndex].y, -1), zoomSpeed); 
+            cam.transform.position = Vector3.Lerp(cam.transform.position, new Vector3(target[targetIndex].x, target[targetIndex].y, -1), zoomSpeed);
         }
         else
         {
             cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, baseCameraSize, zoomSpeed);
             cam.transform.position = Vector3.Lerp(cam.transform.position, new Vector3(0,0,-1), zoomSpeed);
         }
+
+        float height = cam.orthographicSize * 2;
+        float width = height * screenRatio; 
+
+        navParent.transform.localScale = Vector3.one * height / 600f;
     }
 
     public void NextTarget()

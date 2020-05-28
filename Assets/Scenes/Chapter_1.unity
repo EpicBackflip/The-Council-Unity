@@ -215,7 +215,6 @@ RectTransform:
   - {fileID: 465756911}
   - {fileID: 1651644546}
   - {fileID: 2088213699}
-  - {fileID: 338583579}
   - {fileID: 1475641409}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -250,20 +249,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 338583578}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2087683036}
   - {fileID: 1792758005}
   - {fileID: 759489200}
-  m_Father: {fileID: 286755261}
-  m_RootOrder: 4
+  m_Father: {fileID: 1651644546}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.71999997}
+  m_SizeDelta: {x: 1275, y: 522.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &338583580
 MonoBehaviour:
@@ -529,6 +528,7 @@ GameObject:
   - component: {fileID: 759489203}
   - component: {fileID: 759489202}
   - component: {fileID: 759489201}
+  - component: {fileID: 759489204}
   m_Layer: 5
   m_Name: NextPanelButton
   m_TagString: Untagged
@@ -646,6 +646,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 759489199}
   m_CullTransparentMesh: 0
+--- !u!114 &759489204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759489199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 866c5811dc2108d44974eb26b9b851a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 759489202}
 --- !u!1 &1431196541
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,7 +762,7 @@ Transform:
   m_LocalScale: {x: 1.0057768, y: 1.0057768, z: 1.0057768}
   m_Children: []
   m_Father: {fileID: 286755261}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1651644545
 GameObject:
@@ -779,7 +792,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.72, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 338583579}
   m_Father: {fileID: 286755261}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -846,6 +860,7 @@ GameObject:
   - component: {fileID: 1792758008}
   - component: {fileID: 1792758007}
   - component: {fileID: 1792758006}
+  - component: {fileID: 1792758009}
   m_Layer: 5
   m_Name: PausePanelButton
   m_TagString: Untagged
@@ -963,6 +978,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792758004}
   m_CullTransparentMesh: 0
+--- !u!114 &1792758009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792758004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 866c5811dc2108d44974eb26b9b851a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 1792758007}
 --- !u!1 &2087683035
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,6 +1003,7 @@ GameObject:
   - component: {fileID: 2087683039}
   - component: {fileID: 2087683038}
   - component: {fileID: 2087683037}
+  - component: {fileID: 2087683040}
   m_Layer: 5
   m_Name: BackPanelButton
   m_TagString: Untagged
@@ -1091,7 +1120,20 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087683035}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
+--- !u!114 &2087683040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087683035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 866c5811dc2108d44974eb26b9b851a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 2087683038}
 --- !u!1 &2088213698
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,6 +1181,9 @@ MonoBehaviour:
   board: {fileID: 465756912}
   zoomInMargin: 0.001
   zoomOutMargin: 1
+  navParent: {fileID: 338583578}
+  parentX: 0
+  parentY: 0
   targetIndex: 0
   nextChapter: 4
   paused: 0
@@ -1148,5 +1193,5 @@ MonoBehaviour:
   - {x: 425, y: 0, z: 255}
   - {x: 0, y: 260, z: 240}
   - {x: 0, y: -250, z: 225}
-  - {x: 0, y: -50, z: 200}
+  - {x: 0, y: -50, z: 100}
   zoomSpeed: 0.0225

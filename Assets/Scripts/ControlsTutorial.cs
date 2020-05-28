@@ -1,12 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ControlsTutorial : MonoBehaviour
+public class ControlsTutorial : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    // Start is called before the first frame update
-
     public Image[] panels;
 
     Color tempColor = new Color(0,0,0,0);
@@ -21,6 +20,15 @@ public class ControlsTutorial : MonoBehaviour
     public bool IsFinished
     {
         get { return isFinished;  }
+    }
+
+    public void OnPointerEnter(PointerEventData pointerEventData)
+    {
+        Debug.Log("Cursor Entering " + name + " GameObject");
+    }
+    public void OnPointerExit(PointerEventData pointerEventData)
+    {
+        Debug.Log("Cursor Exiting " + name + " GameObject");
     }
 
     void Start()
