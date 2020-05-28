@@ -20,7 +20,7 @@ public class ControlsTutorial : MonoBehaviour
 
     private int index;
     private static bool isFinished;
-    private bool hasBlinked; 
+    private bool hasBlinked;
     public bool IsFinished
     {
         get { return isFinished;  }
