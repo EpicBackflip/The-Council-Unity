@@ -6,20 +6,14 @@ using UnityEngine;
 public class NavigationManager : MonoBehaviour
 {
     public CameraZoomComponent zoom;
-    public ControlsTutorial controls; 
-    public Previous previous;
+    public ControlsTutorial controls;
 
     public void Back()
     {
         if(!checkIfCanProceed())
             return;
 
-        var goToPreviousScene = zoom.PreviousTarget();
-
-        if (goToPreviousScene)
-        {
-            previous.previousScene();
-        }
+       zoom.PreviousTarget();
     }
 
     public void Pause()

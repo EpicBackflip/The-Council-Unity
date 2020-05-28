@@ -12,15 +12,16 @@ public class ControlsTutorial : MonoBehaviour
 
     public Text[] textToDisplay;
 
-    Color tempColor = new Color(0,0,0,0);
+    private Color tempColor = new Color(0,0,0,0);
 
     public float maxOpacityChange = 0.45f;
     public float changeRate = 0.02f;
-    int blinkCount;
+    private int blinkCount;
 
     private int index;
     private static bool isFinished;
     private bool hasBlinked;
+
     public bool IsFinished
     {
         get { return isFinished;  }

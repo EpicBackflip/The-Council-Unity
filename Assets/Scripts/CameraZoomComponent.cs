@@ -10,15 +10,10 @@ public class CameraZoomComponent : MonoBehaviour
     public SpriteRenderer board;
     public float zoomInMargin;
     public float zoomOutMargin;
-   
-
+    
     public GameObject navParent;
-    private Vector3 scaleChange;
-    public float parentX;
-    public float parentY; 
 
     public int targetIndex;
-    public int nextChapter;
     public bool paused;
 
     public ControlsTutorial controls; 
@@ -34,10 +29,7 @@ public class CameraZoomComponent : MonoBehaviour
     public float zoomSpeed;
 
     public void Start()
-    { 
-        parentX = navParent.transform.localScale.x;
-        parentY = navParent.transform.localScale.y;
-
+    {
         screenRatio = (float)Screen.width / Screen.height;
         float targetRatio = board.bounds.size.x / board.bounds.size.y;
 
