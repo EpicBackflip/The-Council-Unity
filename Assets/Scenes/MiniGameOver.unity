@@ -155,10 +155,10 @@ RectTransform:
   m_Father: {fileID: 2127681180}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -586.29, y: -233.05}
-  m_SizeDelta: {x: 155.41, y: 66.9}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -539.12, y: -213.02}
+  m_SizeDelta: {x: -1078.2491, y: -426.04037}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &350379113
 MonoBehaviour:
@@ -621,7 +621,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1528054602}
   - component: {fileID: 1528054601}
-  - component: {fileID: 1528054600}
   - component: {fileID: 1528054599}
   - component: {fileID: 1528054598}
   m_Layer: 0
@@ -678,18 +677,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.88, y: 7.48}
   m_EdgeRadius: 0
---- !u!114 &1528054600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528054597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b503f122e6232e46af0be7a31fcce5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1528054601
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -788,8 +775,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -41.1, y: -48.4}
+  m_SizeDelta: {x: -82.22505, y: -96.84287}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1613172826
 MonoBehaviour:
@@ -817,7 +804,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 62
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0

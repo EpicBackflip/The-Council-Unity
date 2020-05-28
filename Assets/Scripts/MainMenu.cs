@@ -21,6 +21,11 @@ public void Tutorial()
         Loader.Load(Loader.Scenes.Chapter_1);
     }
 
+public void Return()
+{
+    Loader.Load(Loader.Scenes.menu);
+    }
+
 public void Quit()
     {
         Debug.Log("quit");
