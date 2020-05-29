@@ -7,11 +7,7 @@ public class RodeBlokjesAudioDelayed : MonoBehaviour
     public AudioSource RodeAudio;
     void Start()
     {
-
-
-        RodeAudio.PlayDelayed(10.0f);
-
-
+        RodeAudio.PlayDelayed(35f);
     }
 
 
