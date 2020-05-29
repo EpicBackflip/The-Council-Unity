@@ -5,29 +5,28 @@ using UnityEngine;
 public class GroeneBlokjesAudioDelayed : MonoBehaviour
 {
     public AudioSource GroeneAudio;
-    public CameraZoomComponent cam;
-    void Start()
+    public CameraZoomComponent zoomm;
+    public AudioClip clip;
+    public Camera cam;
+
+
+    public void Play()
     {
-
-       
-        GroeneAudio.PlayDelayed(2.0f);
-      
-
+        AudioSource.PlayClipAtPoint(clip, cam.transform.position);
     }
-
 
     void Update()
     {
 
-        if (cam.paused)
+        if (zoomm.paused)
         {
-            
-            GroeneAudio.Pause();
+            //
+           // GroeneAudio.Pause();
 
         }
         else
         {
-            GroeneAudio.UnPause();
+           // GroeneAudio.UnPause();
         }
         
     }
