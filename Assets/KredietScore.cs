@@ -16,7 +16,11 @@ public class KredietScore : MonoBehaviour
         KredietAudio.Play();
         //AudioSource.PlayClipAtPoint(clip, position);
     }
+    public void Pause()
+    {
 
+        KredietAudio.Stop();
+    }
     void Update()
     {
 

@@ -17,6 +17,12 @@ public class WijkenUitleg : MonoBehaviour
         //AudioSource.PlayClipAtPoint(clip, position);
     }
 
+    public void Pause()
+    {
+
+        WijkenAudio.Stop();
+        zoomm.wijkenisPlaying = false;
+    }
     void Update()
     {
 

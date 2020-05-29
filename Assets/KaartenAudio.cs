@@ -16,7 +16,12 @@ public class KaartenAudio : MonoBehaviour
         kaartenAudio.Play();
         //AudioSource.PlayClipAtPoint(clip, position);
     }
+    public void Pause()
+    {
 
+        kaartenAudio.Stop();
+        zoomm.kaartisPlaying = false;
+    }
     void Update()
     {
 
