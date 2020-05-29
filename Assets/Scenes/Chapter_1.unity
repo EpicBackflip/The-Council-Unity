@@ -2445,7 +2445,8 @@ MonoBehaviour:
   - {x: 0, y: 260, z: 240}
   - {x: 0, y: -250, z: 225}
   - {x: 0, y: -50, z: 100}
-  - {x: 0, y: 0, z: 0}
+  - {x: 200, y: 170, z: 120}
+  - {x: 0, y: 0, z: 255}
   zoomSpeed: 0.0225
   timer: 0
   groenblokjes: {fileID: 1873903996}
