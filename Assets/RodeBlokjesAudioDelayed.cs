@@ -5,14 +5,32 @@ using UnityEngine;
 public class RodeBlokjesAudioDelayed : MonoBehaviour
 {
     public AudioSource RodeAudio;
+    public CameraZoomComponent cam;
+    public float delayTimer;
     void Start()
     {
-        RodeAudio.PlayDelayed(37f);
+        delayTimer = 37;
+        RodeAudio.PlayDelayed(delayTimer);
+
+
+
     }
 
 
     void Update()
     {
+     
+        if (cam.paused)
+        {
+            delayTimer += Time.deltaTime;
+            RodeAudio.Pause();
+
+        }
+        else
+        {
+            RodeAudio.UnPause();
+        }
 
     }
 }
+

@@ -15,7 +15,7 @@ public class CameraZoomComponent : MonoBehaviour
     public GameObject navParent;
 
     private int targetIndex = 0;
-    private bool paused;
+    public bool paused;
     private float WaitTime = 34f;
 
     public ControlsTutorial controls; 
@@ -29,7 +29,7 @@ public class CameraZoomComponent : MonoBehaviour
 
     //The rate of zoom
     public float zoomSpeed;
-    private float timer;
+    public float timer;
 
     public bool Paused
     {
@@ -52,10 +52,13 @@ public class CameraZoomComponent : MonoBehaviour
             baseCameraSize = board.bounds.size.y / 2 * difference; 
         }
     }
+
     public void Update()
     {
-        timer += Time.deltaTime;
-
+        if (!paused)
+        {
+            timer += Time.deltaTime;
+        }
         if (timer > WaitTime)
         {
             isZoomActive = false;

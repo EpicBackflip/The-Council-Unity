@@ -5,14 +5,28 @@ using UnityEngine;
 public class WijkenUitleg : MonoBehaviour
 {
     public AudioSource WijkenAudio;
+    public CameraZoomComponent cam;
     void Start()
     {
-        WijkenAudio.PlayDelayed(72f);
+
+ 
+        WijkenAudio.PlayDelayed(80);
+
+
     }
 
 
     void Update()
     {
+        if (cam.paused)
+        {
+            WijkenAudio.Pause();
+
+        }
+        else
+        {
+            WijkenAudio.UnPause();
+        }
 
     }
 }
