@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 42085041}
   - component: {fileID: 42085040}
   m_Layer: 0
-  m_Name: coinBank
+  m_Name: CoinBank
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 349155509}
   - component: {fileID: 349155508}
   m_Layer: 0
-  m_Name: mini game background
+  m_Name: MiniGameBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -488,8 +488,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349155507}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.8313406, y: 0.6323069, z: 0.4484446}
+  m_LocalPosition: {x: -0.01, y: 0.56, z: 0}
+  m_LocalScale: {x: 0.64, y: 0.64, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -506,7 +506,7 @@ GameObject:
   - component: {fileID: 1099240506}
   - component: {fileID: 1099240505}
   m_Layer: 5
-  m_Name: Text
+  m_Name: YouWinText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -528,7 +528,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 142, y: 104}
+  m_AnchoredPosition: {x: 10.8, y: 268.2}
   m_SizeDelta: {x: 506.5, y: 184.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1099240505
@@ -544,25 +544,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.17254902, g: 0.17254902, b: 0.17254902, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
-    m_FontStyle: 0
+    m_FontSize: 45
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 5
-    m_MaxSize: 50
-    m_Alignment: 0
+    m_MinSize: 4
+    m_MaxSize: 55
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'You Win '
+  m_Text: 'YOU WIN! '
 --- !u!222 &1099240506
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -683,7 +684,7 @@ GameObject:
   - component: {fileID: 1570897375}
   - component: {fileID: 1570897374}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: GevangenisText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -705,8 +706,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 77, y: -80.8}
-  m_SizeDelta: {x: 506.5, y: 184.8}
+  m_AnchoredPosition: {x: 3.7, y: 222.3}
+  m_SizeDelta: {x: 1155, y: 230.81874}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1570897374
 MonoBehaviour:
@@ -721,25 +722,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.17254902, g: 0.17254902, b: 0.17254902, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 4
     m_MaxSize: 50
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Je mag nu uit de gevangenis!
+  m_Text: JE MAG NU UIT DE GEVANGENIS!
 --- !u!222 &1570897375
 CanvasRenderer:
   m_ObjectHideFlags: 0
