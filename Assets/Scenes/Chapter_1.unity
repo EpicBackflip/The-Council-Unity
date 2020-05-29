@@ -1593,7 +1593,7 @@ GameObject:
   - component: {fileID: 1097187145}
   - component: {fileID: 1097187144}
   m_Layer: 0
-  m_Name: Wijkenuitleg
+  m_Name: WijkenUitleg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1638,7 +1638,7 @@ GameObject:
   - component: {fileID: 1341098606}
   - component: {fileID: 1341098607}
   m_Layer: 0
-  m_Name: wijkenuitleg
+  m_Name: WijkenUitleg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
