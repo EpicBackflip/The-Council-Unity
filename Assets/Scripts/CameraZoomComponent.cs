@@ -32,8 +32,17 @@ public class CameraZoomComponent : MonoBehaviour
     public float timer;
     public GroeneBlokjesAudioDelayed groenblokjes;
     public RodeBlokjesAudioDelayed rodeblokjes;
+    public Bankrun bankrun;
+    public KredietScore krediet;
+    public KaartenAudio kaarten;
+    public WijkenUitleg wijken;
     private bool gisPlaying;
     private bool risPlaying;
+    private bool bisPlaying;
+    private bool kisPlaying;
+    private bool kaartisPlaying;
+    private bool wijkenisPlaying;
+    public float timeraudio;
     public bool Paused
     {
         get { return paused;  }
@@ -102,8 +111,40 @@ public class CameraZoomComponent : MonoBehaviour
             risPlaying = true;
         }
 
+        if (isZoomActive && targetIndex == 2 && !bisPlaying)
+        {
+          
+            Console.WriteLine("hit");
+            bankrun.Play();
+            bisPlaying = true;
+        }
+        /*
+        if (isZoomActive && targetIndex == 2 && !kisPlaying )
+        {
+            Console.WriteLine("hit");
+            krediet.Play();
+            kisPlaying = true;
+        }
+        */
 
-      
+        if (isZoomActive && targetIndex == 3 && !kaartisPlaying)
+        {
+            Console.WriteLine("hit");
+            kaarten.Play();
+            kaartisPlaying = true;
+        }
+
+        if (isZoomActive && targetIndex == 4 && !wijkenisPlaying)
+        {
+            Console.WriteLine("hit");
+            wijken.Play();
+            wijkenisPlaying = true;
+        }
+
+
+
+
+
 
         if (isZoomActive && targetIndex < target.Length)
         {

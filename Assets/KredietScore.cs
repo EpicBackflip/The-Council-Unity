@@ -5,17 +5,23 @@ using UnityEngine;
 public class KredietScore : MonoBehaviour
 {
     public AudioSource KredietAudio;
-    public CameraZoomComponent cam;
-    void Start()
-    {
-        //KredietAudio.PlayDelayed(39.0f);
-    }
+    public CameraZoomComponent zoomm;
+    //public AudioClip clip;
+    //public Camera cam;
+    // private Vector3 position = new Vector3(427, -5, -1);
 
+
+    public void Play()
+    {
+        KredietAudio.Play();
+        //AudioSource.PlayClipAtPoint(clip, position);
+    }
 
     void Update()
     {
 
-        if (cam.paused)
+
+        if (zoomm.paused)
         {
 
             KredietAudio.Pause();

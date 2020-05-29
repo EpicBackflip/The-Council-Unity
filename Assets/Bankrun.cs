@@ -4,31 +4,32 @@ using UnityEngine;
 
 public class Bankrun : MonoBehaviour
 {
-    
-    public AudioSource BankAudio;
-    public CameraZoomComponent cam;
-    void Start()
+    public AudioSource BankrunAudio;
+    public CameraZoomComponent zoomm;
+    //public AudioClip clip;
+    //public Camera cam;
+    // private Vector3 position = new Vector3(427, -5, -1);
+
+
+    public void Play()
     {
-
-
-        BankAudio.PlayDelayed(72.0f);
-
-
+        BankrunAudio.Play();
+        //AudioSource.PlayClipAtPoint(clip, position);
     }
-
 
     void Update()
     {
 
-        if (cam.paused)
+
+        if (zoomm.paused)
         {
 
-            BankAudio.Pause();
+            BankrunAudio.Pause();
 
         }
         else
         {
-            BankAudio.UnPause();
+            BankrunAudio.UnPause();
         }
 
     }
