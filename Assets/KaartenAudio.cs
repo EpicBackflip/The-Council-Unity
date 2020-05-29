@@ -10,7 +10,7 @@ public class KaartenAudio : MonoBehaviour
     {
 
 
-        kaartenAudio.PlayDelayed(2.0f);
+        kaartenAudio.PlayDelayed(110.0f);
 
 
     }

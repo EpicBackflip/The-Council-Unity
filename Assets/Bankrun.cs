@@ -11,7 +11,7 @@ public class Bankrun : MonoBehaviour
     {
 
 
-        BankAudio.PlayDelayed(2.0f);
+        BankAudio.PlayDelayed(72.0f);
 
 
     }

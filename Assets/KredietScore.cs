@@ -10,7 +10,7 @@ public class KredietScore : MonoBehaviour
     {
 
 
-        KredietAudio.PlayDelayed(2.0f);
+        KredietAudio.PlayDelayed(39.0f);
 
 
     }

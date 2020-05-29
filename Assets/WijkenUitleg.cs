@@ -10,7 +10,7 @@ public class WijkenUitleg : MonoBehaviour
     {
 
  
-        WijkenAudio.PlayDelayed(80);
+        WijkenAudio.PlayDelayed(156);
 
 
     }

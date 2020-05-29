@@ -10,7 +10,7 @@ public class RodeBlokjesAudioDelayed : MonoBehaviour
     void Start()
     {
         delayTimer = 37;
-        RodeAudio.PlayDelayed(delayTimer);
+        //RodeAudio.PlayDelayed(delayTimer);
 
 
 
