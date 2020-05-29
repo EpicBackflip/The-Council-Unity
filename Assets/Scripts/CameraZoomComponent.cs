@@ -16,7 +16,7 @@ public class CameraZoomComponent : MonoBehaviour
 
     private int targetIndex = -1;
     private bool paused;
-    private float WaitTime = 3000f;
+    private float WaitTime = 34f;
 
     public ControlsTutorial controls; 
 
@@ -54,7 +54,7 @@ public class CameraZoomComponent : MonoBehaviour
     }
     public void Update()
     {
-        timer++;
+        timer += Time.deltaTime;
 
         if (timer > WaitTime)
         {
