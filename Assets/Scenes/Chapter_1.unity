@@ -2445,8 +2445,7 @@ MonoBehaviour:
   - {x: 0, y: 260, z: 240}
   - {x: 0, y: -250, z: 225}
   - {x: 0, y: -50, z: 100}
-  - {x: 200, y: 170, z: 120}
-  - {x: 0, y: 0, z: 255}
+  - {x: 200, y: 240, z: 100}
   zoomSpeed: 0.0225
   timer: 0
   groenblokjes: {fileID: 1873903996}
@@ -2455,4 +2454,10 @@ MonoBehaviour:
   krediet: {fileID: 870914948}
   kaarten: {fileID: 126593420}
   wijken: {fileID: 1097187144}
+  gisPlaying: 0
+  risPlaying: 0
+  bisPlaying: 0
+  kisPlaying: 0
+  kaartisPlaying: 0
+  wijkenisPlaying: 0
   timeraudio: 0

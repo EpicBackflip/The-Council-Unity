@@ -16,6 +16,12 @@ public class Bankrun : MonoBehaviour
         BankrunAudio.Play();
         //AudioSource.PlayClipAtPoint(clip, position);
     }
+    public void Pause()
+    {
+
+        BankrunAudio.Stop();
+        zoomm.bisPlaying = false;
+    }
 
     void Update()
     {

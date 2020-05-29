@@ -16,7 +16,12 @@ public class RodeBlokjesAudioDelayed : MonoBehaviour
         RodeAudio.Play();
         //AudioSource.PlayClipAtPoint(clip, position);
     }
+    public void Pause()
+    {
 
+        RodeAudio.Stop();
+        zoomm.risPlaying = false;
+    }
     void Update()
     {
 

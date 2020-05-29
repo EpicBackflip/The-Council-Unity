@@ -36,12 +36,12 @@ public class CameraZoomComponent : MonoBehaviour
     public KredietScore krediet;
     public KaartenAudio kaarten;
     public WijkenUitleg wijken;
-    private bool gisPlaying;
-    private bool risPlaying;
-    private bool bisPlaying;
-    private bool kisPlaying;
-    private bool kaartisPlaying;
-    private bool wijkenisPlaying;
+    public bool gisPlaying;
+    public bool risPlaying;
+    public bool bisPlaying;
+    public bool kisPlaying;
+    public bool kaartisPlaying;
+    public bool wijkenisPlaying;
     public float timeraudio;
     public bool Paused
     {
@@ -100,45 +100,85 @@ public class CameraZoomComponent : MonoBehaviour
         if (isZoomActive && targetIndex == 0 && !gisPlaying)
         {
             Console.WriteLine("hit");
-            groenblokjes.Play();
             gisPlaying = true;
+            groenblokjes.Play();
+            rodeblokjes.Pause();
+            bankrun.Pause();
+            kaarten.Pause();
+            wijken.Pause();
+            krediet.Pause();
+
+
         }
 
         if (isZoomActive && targetIndex == 1 && !risPlaying)
         {
             Console.WriteLine("hit");
-            rodeblokjes.Play();
             risPlaying = true;
+            rodeblokjes.Play();
+            groenblokjes.Pause();
+            bankrun.Pause();
+            kaarten.Pause();
+            wijken.Pause();
+            krediet.Pause();
+
+
         }
 
         if (isZoomActive && targetIndex == 2 && !bisPlaying)
         {
           
             Console.WriteLine("hit");
-            bankrun.Play();
             bisPlaying = true;
+            bankrun.Play();
+            groenblokjes.Pause();
+            rodeblokjes.Pause();
+            kaarten.Pause();
+            wijken.Pause();
+            krediet.Pause();
+
+
         }
-        /*
-        if (isZoomActive && targetIndex == 2 && !kisPlaying )
-        {
-            Console.WriteLine("hit");
-            krediet.Play();
-            kisPlaying = true;
-        }
-        */
 
         if (isZoomActive && targetIndex == 3 && !kaartisPlaying)
         {
             Console.WriteLine("hit");
-            kaarten.Play();
             kaartisPlaying = true;
+            kaarten.Play();
+            groenblokjes.Pause();
+            rodeblokjes.Pause();
+            bankrun.Pause();
+            wijken.Pause();
+            krediet.Pause();
+
         }
 
         if (isZoomActive && targetIndex == 4 && !wijkenisPlaying)
         {
+            wijkenisPlaying = true;
             Console.WriteLine("hit");
             wijken.Play();
-            wijkenisPlaying = true;
+            groenblokjes.Pause();
+            rodeblokjes.Pause();
+            bankrun.Pause();
+            kaarten.Pause();
+            krediet.Pause();
+
+        }
+
+        if (isZoomActive && targetIndex == 5 && !kisPlaying)
+        {
+            Console.WriteLine("hit");
+            kisPlaying = true;
+            krediet.Play();
+            groenblokjes.Pause();
+            rodeblokjes.Pause();
+            kaarten.Pause();
+            wijken.Pause();
+            bankrun.Pause();
+
+
+
         }
 
 

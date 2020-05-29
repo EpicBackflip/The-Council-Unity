@@ -17,6 +17,13 @@ public class GroeneBlokjesAudioDelayed : MonoBehaviour
         //AudioSource.PlayClipAtPoint(clip, position);
     }
 
+    public void Pause()
+    {
+
+        GroeneAudio.Stop();
+        zoomm.gisPlaying = false;
+    }
+
     void Update()
     {
        
