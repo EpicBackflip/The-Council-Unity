@@ -106,8 +106,9 @@ public class CameraZoomComponent : MonoBehaviour
             bankrun.Pause();
             kaarten.Pause();
             wijken.Pause();
-          
-          
+            krediet.Pause();
+
+
         }
 
         if (isZoomActive && targetIndex == 1 && !risPlaying)
@@ -119,8 +120,9 @@ public class CameraZoomComponent : MonoBehaviour
             bankrun.Pause();
             kaarten.Pause();
             wijken.Pause();
-          
-          
+            krediet.Pause();
+
+
         }
 
         if (isZoomActive && targetIndex == 2 && !bisPlaying)
@@ -133,28 +135,21 @@ public class CameraZoomComponent : MonoBehaviour
             rodeblokjes.Pause();
             kaarten.Pause();
             wijken.Pause();
-           
+            krediet.Pause();
+
 
         }
-        /*
-        if (isZoomActive && targetIndex == 2 && !kisPlaying )
-        {
-            Console.WriteLine("hit");
-            krediet.Play();
-            kisPlaying = true;
-        }
-        */
 
         if (isZoomActive && targetIndex == 3 && !kaartisPlaying)
         {
             Console.WriteLine("hit");
             kaartisPlaying = true;
             kaarten.Play();
-          
             groenblokjes.Pause();
             rodeblokjes.Pause();
             bankrun.Pause();
             wijken.Pause();
+            krediet.Pause();
 
         }
 
@@ -167,6 +162,22 @@ public class CameraZoomComponent : MonoBehaviour
             rodeblokjes.Pause();
             bankrun.Pause();
             kaarten.Pause();
+            krediet.Pause();
+
+        }
+
+        if (isZoomActive && targetIndex == 5 && !kisPlaying)
+        {
+            Console.WriteLine("hit");
+            kisPlaying = true;
+            krediet.Play();
+            groenblokjes.Pause();
+            rodeblokjes.Pause();
+            kaarten.Pause();
+            wijken.Pause();
+            bankrun.Pause();
+
+
 
         }
 
