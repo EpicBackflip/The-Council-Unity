@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using UnityEngine;
@@ -15,6 +16,7 @@ public class CameraZoomComponent : MonoBehaviour
 
     public int targetIndex;
     public bool paused;
+    private float WaitTime = 3000;
 
     public ControlsTutorial controls; 
 
@@ -27,7 +29,7 @@ public class CameraZoomComponent : MonoBehaviour
 
     //The rate of zoom
     public float zoomSpeed;
-
+    public float timer = 0;
     public void Start()
     {
         screenRatio = (float)Screen.width / Screen.height;
@@ -45,6 +47,15 @@ public class CameraZoomComponent : MonoBehaviour
     }
     public void Update()
     {
+
+        timer++;
+
+        if (timer > WaitTime)
+        {
+            isZoomActive = false;
+            timer = 0;
+        }
+
         if (paused || !controls.IsFinished)
         {
             
@@ -54,10 +65,10 @@ public class CameraZoomComponent : MonoBehaviour
         if (targetIndex > target.Length - 1)
             return;
 
-        if (cam.orthographicSize < target[targetIndex].z + zoomInMargin)
-        {
-            isZoomActive = false;
-        }
+        //if (cam.orthographicSize < target[targetIndex].z + zoomInMargin)
+        //{
+        //    isZoomActive = false;
+        //}
 
         if (!isZoomActive && cam.orthographicSize > baseCameraSize - zoomOutMargin)
         {
