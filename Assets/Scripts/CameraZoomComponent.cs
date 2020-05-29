@@ -14,9 +14,9 @@ public class CameraZoomComponent : MonoBehaviour
     
     public GameObject navParent;
 
-    public int targetIndex;
-    public bool paused;
-    private float WaitTime = 3000;
+    private int targetIndex;
+    private bool paused;
+    private float WaitTime = 3000f;
 
     public ControlsTutorial controls; 
 
@@ -29,7 +29,14 @@ public class CameraZoomComponent : MonoBehaviour
 
     //The rate of zoom
     public float zoomSpeed;
-    public float timer = 0;
+    private float timer = 0;
+
+    public bool Paused
+    {
+        get { return paused;  }
+        set { paused = value;  }
+    }
+
     public void Start()
     {
         screenRatio = (float)Screen.width / Screen.height;
@@ -47,7 +54,6 @@ public class CameraZoomComponent : MonoBehaviour
     }
     public void Update()
     {
-
         timer++;
 
         if (timer > WaitTime)
@@ -58,7 +64,6 @@ public class CameraZoomComponent : MonoBehaviour
 
         if (paused || !controls.IsFinished)
         {
-            
             return;
         }
 

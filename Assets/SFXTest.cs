@@ -13,22 +13,19 @@ public class SFXTest : MonoBehaviour
     {
        Console.WriteLine(timer);
         timer++;
-        if (cam2.paused)
+        if (cam2.Paused)
         {
             PauseTest();
         }
-        if(!cam2.paused)
+
+        if (!cam2.Paused)
         {
             PlayTest();
-
         }
-
-
     }
     public void PlayTest()
     {
         Test.Play();
-
     }
 
     public void PauseTest()

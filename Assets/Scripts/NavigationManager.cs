@@ -21,7 +21,7 @@ public class NavigationManager : MonoBehaviour
         if (!checkIfCanProceed())
             return;
 
-        zoom.paused = !zoom.paused;
+        zoom.Paused = !zoom.Paused;
     }
 
     public void Next()
