@@ -6,14 +6,15 @@ public class GroeneBlokjesAudioDelayed : MonoBehaviour
 {
     public AudioSource GroeneAudio;
     public CameraZoomComponent zoomm;
-    public AudioClip clip;
-    public Camera cam;
-    private Vector3 position = new Vector3(427, -5, -1);
+    //public AudioClip clip;
+    //public Camera cam;
+   // private Vector3 position = new Vector3(427, -5, -1);
 
 
     public void Play()
     {
-        AudioSource.PlayClipAtPoint(clip, position);
+        GroeneAudio.Play();
+        //AudioSource.PlayClipAtPoint(clip, position);
     }
 
     void Update()
@@ -22,13 +23,13 @@ public class GroeneBlokjesAudioDelayed : MonoBehaviour
 
         if (zoomm.paused)
         {
-            //
-           // GroeneAudio.Pause();
+            
+           GroeneAudio.Pause();
 
         }
         else
         {
-           // GroeneAudio.UnPause();
+           GroeneAudio.UnPause();
         }
         
     }

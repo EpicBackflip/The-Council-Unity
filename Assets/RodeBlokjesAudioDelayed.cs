@@ -5,35 +5,31 @@ using UnityEngine;
 public class RodeBlokjesAudioDelayed : MonoBehaviour
 {
     public AudioSource RodeAudio;
-    public CameraZoomComponent cam;
-    //public float delayTimer;
-    public AudioClip clip;
-    private Vector3 position = new Vector3(-427, -10, -1);
-    void Start()
-    {
-        //delayTimer = 37;
-        //RodeAudio.PlayDelayed(delayTimer);
+    public CameraZoomComponent zoomm;
+    //public AudioClip clip;
+    //public Camera cam;
+    // private Vector3 position = new Vector3(427, -5, -1);
 
 
-
-    }
     public void Play()
     {
-        AudioSource.PlayClipAtPoint(clip, position);
+        RodeAudio.Play();
+        //AudioSource.PlayClipAtPoint(clip, position);
     }
 
     void Update()
     {
-     
-        if (cam.paused)
+
+
+        if (zoomm.paused)
         {
-            //delayTimer += Time.deltaTime;
-           // RodeAudio.Pause();
+
+            RodeAudio.Pause();
 
         }
         else
         {
-            //RodeAudio.UnPause();
+            RodeAudio.UnPause();
         }
 
     }
