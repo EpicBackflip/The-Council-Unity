@@ -14,7 +14,7 @@ public class CameraZoomComponent : MonoBehaviour
     
     public GameObject navParent;
 
-    private int targetIndex = -1;
+    private int targetIndex = 0;
     private bool paused;
     private float WaitTime = 34f;
 
