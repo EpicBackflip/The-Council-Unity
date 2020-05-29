@@ -8,7 +8,7 @@ public class KredietScore : MonoBehaviour
     public CameraZoomComponent cam;
     void Start()
     {
-        KredietAudio.PlayDelayed(39.0f);
+        //KredietAudio.PlayDelayed(39.0f);
     }
 
 

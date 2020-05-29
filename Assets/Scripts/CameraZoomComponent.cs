@@ -31,7 +31,9 @@ public class CameraZoomComponent : MonoBehaviour
     public float zoomSpeed;
     public float timer;
     public GroeneBlokjesAudioDelayed groenblokjes;
-    private bool isPlaying;
+    public RodeBlokjesAudioDelayed rodeblokjes;
+    private bool gisPlaying;
+    private bool risPlaying;
     public bool Paused
     {
         get { return paused;  }
@@ -86,12 +88,22 @@ public class CameraZoomComponent : MonoBehaviour
            NextTarget();
         }
 
-        if (isZoomActive && targetIndex == 0 && !isPlaying)
+        if (isZoomActive && targetIndex == 0 && !gisPlaying)
         {
             Console.WriteLine("hit");
             groenblokjes.Play();
-            isPlaying = true;
+            gisPlaying = true;
         }
+
+        if (isZoomActive && targetIndex == 1 && !risPlaying)
+        {
+            Console.WriteLine("hit");
+            rodeblokjes.Play();
+            risPlaying = true;
+        }
+
+
+      
 
         if (isZoomActive && targetIndex < target.Length)
         {
