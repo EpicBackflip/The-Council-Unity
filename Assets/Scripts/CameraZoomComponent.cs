@@ -30,7 +30,8 @@ public class CameraZoomComponent : MonoBehaviour
     //The rate of zoom
     public float zoomSpeed;
     public float timer;
-
+    public GroeneBlokjesAudioDelayed groenblokjes;
+    private bool isPlaying;
     public bool Paused
     {
         get { return paused;  }
@@ -55,6 +56,8 @@ public class CameraZoomComponent : MonoBehaviour
 
     public void Update()
     {
+       
+
         if (!paused)
         {
             timer += Time.deltaTime;
@@ -81,6 +84,13 @@ public class CameraZoomComponent : MonoBehaviour
         if (!isZoomActive && cam.orthographicSize > baseCameraSize - zoomOutMargin)
         {
            NextTarget();
+        }
+
+        if (isZoomActive && targetIndex == 0 && !isPlaying)
+        {
+            Console.WriteLine("hit");
+            groenblokjes.Play();
+            isPlaying = true;
         }
 
         if (isZoomActive && targetIndex < target.Length)
