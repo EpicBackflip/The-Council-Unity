@@ -1124,7 +1124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RodeAudio: {fileID: 436800721}
   cam: {fileID: 2088213700}
-  delayTimer: 0
+  clip: {fileID: 8300000, guid: 159348d06e6b11e4f90f39e1cec487ed, type: 3}
 --- !u!4 &724444715
 Transform:
   m_ObjectHideFlags: 0
@@ -1358,16 +1358,16 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 7227ad3da0215d34d807aa74ad347119, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 3
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
+  Priority: 0
+  DopplerLevel: 0.9
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: 1
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -2152,6 +2152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd75d5470807d7a43afac15e14058c27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GroeneAudio: {fileID: 0}
   zoomm: {fileID: 2088213700}
   clip: {fileID: 8300000, guid: 7227ad3da0215d34d807aa74ad347119, type: 3}
   cam: {fileID: 1651644549}
@@ -2451,3 +2452,4 @@ MonoBehaviour:
   zoomSpeed: 0.0225
   timer: 0
   groenblokjes: {fileID: 1873903996}
+  rodeblokjes: {fileID: 0}

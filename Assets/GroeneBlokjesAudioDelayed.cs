@@ -8,15 +8,17 @@ public class GroeneBlokjesAudioDelayed : MonoBehaviour
     public CameraZoomComponent zoomm;
     public AudioClip clip;
     public Camera cam;
+    private Vector3 position = new Vector3(427, -5, -1);
 
 
     public void Play()
     {
-        AudioSource.PlayClipAtPoint(clip, cam.transform.position);
+        AudioSource.PlayClipAtPoint(clip, position);
     }
 
     void Update()
     {
+       
 
         if (zoomm.paused)
         {
