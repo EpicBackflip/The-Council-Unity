@@ -20,7 +20,7 @@ public class KaartenAudio : MonoBehaviour
     {
 
         kaartenAudio.Stop();
-        zoomm.kaartisPlaying = false;
+        zoomm.kaartenIsPlaying = false;
     }
     void Update()
     {

@@ -20,7 +20,7 @@ public class KredietScore : MonoBehaviour
     {
 
         KredietAudio.Stop();
-        zoomm.kisPlaying = false;
+        zoomm.kredietScoreIsPlaying = false;
     }
     void Update()
     {

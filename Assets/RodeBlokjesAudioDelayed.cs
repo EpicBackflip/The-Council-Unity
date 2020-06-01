@@ -20,7 +20,7 @@ public class RodeBlokjesAudioDelayed : MonoBehaviour
     {
 
         RodeAudio.Stop();
-        zoomm.risPlaying = false;
+        zoomm.rodeBlokjesIsPlaying = false;
     }
     void Update()
     {

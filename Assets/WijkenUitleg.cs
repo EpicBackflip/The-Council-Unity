@@ -21,7 +21,7 @@ public class WijkenUitleg : MonoBehaviour
     {
 
         WijkenAudio.Stop();
-        zoomm.wijkenisPlaying = false;
+        zoomm.wijkenIsPlaying = false;
     }
     void Update()
     {

@@ -9,14 +9,13 @@ public class CameraZoomComponent : MonoBehaviour
 {
     public Camera cam;
     public SpriteRenderer board;
-    public float zoomInMargin;
     public float zoomOutMargin;
     
     public GameObject navParent;
 
     private int targetIndex = -1;
     public bool paused;
-    private float WaitTime = 40f;
+    private float waitTime = 40f;
 
     public ControlsTutorial controls; 
 
@@ -30,23 +29,23 @@ public class CameraZoomComponent : MonoBehaviour
     //The rate of zoom
     public float zoomSpeed;
     public float timer;
-    public GroeneBlokjesAudioDelayed groenblokjes;
-    public RodeBlokjesAudioDelayed rodeblokjes;
+    public GroeneBlokjesAudioDelayed groenBlokjes;
+    public RodeBlokjesAudioDelayed rodeBlokjes;
     public Bankrun bankrun;
     public KredietScore krediet;
     public KaartenAudio kaarten;
     public WijkenUitleg wijken;
-    public bool gisPlaying;
-    public bool risPlaying;
-    public bool bisPlaying;
-    public bool kisPlaying;
-    public bool kaartisPlaying;
-    public bool wijkenisPlaying;
-    public float timeraudio;
+    public bool groeneBlokjesIsPlaying;
+    public bool rodeBlokjesIsPlaying;
+    public bool bankrunIsPlaying;
+    public bool kredietScoreIsPlaying;
+    public bool kaartenIsPlaying;
+    public bool wijkenIsPlaying;
+
     public bool Paused
     {
-        get { return paused;  }
-        set { paused = value;  }
+        get { return paused; }
+        set { paused = value; }
     }
 
     public void Start()
@@ -67,13 +66,11 @@ public class CameraZoomComponent : MonoBehaviour
 
     public void Update()
     {
-       
-
         if (!paused)
         {
             timer += Time.deltaTime;
         }
-        if (timer > WaitTime)
+        if (timer > waitTime)
         {
             isZoomActive = false;
             timer = 0;
@@ -87,104 +84,82 @@ public class CameraZoomComponent : MonoBehaviour
         if (targetIndex > target.Length - 1)
             return;
 
-        //if (cam.orthographicSize < target[targetIndex].z + zoomInMargin)
-        //{
-        //    isZoomActive = false;
-        //}
-
         if (!isZoomActive && cam.orthographicSize > baseCameraSize - zoomOutMargin)
         {
            NextTarget();
         }
 
-        if (isZoomActive && targetIndex == 0 && !gisPlaying)
+        if (isZoomActive && targetIndex == 0 && !groeneBlokjesIsPlaying)
         {
             Console.WriteLine("hit");
-            gisPlaying = true;
-            groenblokjes.Play();
-            rodeblokjes.Pause();
+            groeneBlokjesIsPlaying = true;
+            groenBlokjes.Play();
+            rodeBlokjes.Pause();
             bankrun.Pause();
             kaarten.Pause();
             wijken.Pause();
             krediet.Pause();
-
-
         }
 
-        if (isZoomActive && targetIndex == 1 && !risPlaying)
+        if (isZoomActive && targetIndex == 1 && !rodeBlokjesIsPlaying)
         {
             Console.WriteLine("hit");
-            risPlaying = true;
-            rodeblokjes.Play();
-            groenblokjes.Pause();
+            rodeBlokjesIsPlaying = true;
+            rodeBlokjes.Play();
+            groenBlokjes.Pause();
             bankrun.Pause();
             kaarten.Pause();
             wijken.Pause();
             krediet.Pause();
-
-
         }
 
-        if (isZoomActive && targetIndex == 2 && !bisPlaying)
+        if (isZoomActive && targetIndex == 2 && !bankrunIsPlaying)
         {
-          
             Console.WriteLine("hit");
-            bisPlaying = true;
+            bankrunIsPlaying = true;
             bankrun.Play();
-            groenblokjes.Pause();
-            rodeblokjes.Pause();
+            groenBlokjes.Pause();
+            rodeBlokjes.Pause();
             kaarten.Pause();
             wijken.Pause();
             krediet.Pause();
-
-
         }
 
-        if (isZoomActive && targetIndex == 3 && !kaartisPlaying)
+        if (isZoomActive && targetIndex == 3 && !kaartenIsPlaying)
         {
             Console.WriteLine("hit");
-            kaartisPlaying = true;
+            kaartenIsPlaying = true;
             kaarten.Play();
-            groenblokjes.Pause();
-            rodeblokjes.Pause();
+            groenBlokjes.Pause();
+            rodeBlokjes.Pause();
             bankrun.Pause();
             wijken.Pause();
             krediet.Pause();
-
         }
 
-        if (isZoomActive && targetIndex == 4 && !wijkenisPlaying)
+        if (isZoomActive && targetIndex == 4 && !wijkenIsPlaying)
         {
-            wijkenisPlaying = true;
             Console.WriteLine("hit");
+            wijkenIsPlaying = true;
             wijken.Play();
-            groenblokjes.Pause();
-            rodeblokjes.Pause();
+            groenBlokjes.Pause();
+            rodeBlokjes.Pause();
             bankrun.Pause();
             kaarten.Pause();
             krediet.Pause();
-
         }
 
-        if (isZoomActive && targetIndex == 5 && !kisPlaying)
+        if (isZoomActive && targetIndex == 5 && !kredietScoreIsPlaying)
         {
             Console.WriteLine("hit");
-            kisPlaying = true;
+            kredietScoreIsPlaying = true;
             krediet.Play();
-            groenblokjes.Pause();
-            rodeblokjes.Pause();
+            groenBlokjes.Pause();
+            rodeBlokjes.Pause();
             kaarten.Pause();
             wijken.Pause();
             bankrun.Pause();
-
-
-
         }
-
-
-
-
-
 
         if (isZoomActive && targetIndex < target.Length)
         {

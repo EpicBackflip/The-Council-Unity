@@ -20,7 +20,7 @@ public class Bankrun : MonoBehaviour
     {
 
         BankrunAudio.Stop();
-        zoomm.bisPlaying = false;
+        zoomm.bankrunIsPlaying = false;
     }
 
     void Update()

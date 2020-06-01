@@ -7,7 +7,6 @@ public class NavigationManager : MonoBehaviour
 {
     public CameraZoomComponent zoom;
     public ControlsTutorial controls;
-
     public void Back()
     {
         if(!checkIfCanProceed())
