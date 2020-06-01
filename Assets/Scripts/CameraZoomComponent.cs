@@ -22,13 +22,15 @@ public class CameraZoomComponent : MonoBehaviour
     private float baseCameraSize;
     private float screenRatio;
 
-    //Defines the target positions and the amount of the zoom (Z)
+    // Defines the target positions and the amount of the zoom (Z)
     public Vector3[] target;
     private bool isZoomActive;
 
-    //The rate of zoom
+    // The rate of zoom variables
     public float zoomSpeed;
     public float timer;
+
+    // Audio variables 
     public GroeneBlokjesAudioDelayed groenBlokjes;
     public RodeBlokjesAudioDelayed rodeBlokjes;
     public Bankrun bankrun;

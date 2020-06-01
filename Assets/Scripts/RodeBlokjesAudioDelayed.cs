@@ -2,42 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GroeneBlokjesAudioDelayed : MonoBehaviour
+public class RodeBlokjesAudioDelayed : MonoBehaviour
 {
-    public AudioSource GroeneAudio;
+    public AudioSource RodeAudio;
     public CameraZoomComponent zoomm;
     //public AudioClip clip;
     //public Camera cam;
-   // private Vector3 position = new Vector3(427, -5, -1);
+    // private Vector3 position = new Vector3(427, -5, -1);
 
 
     public void Play()
     {
-        GroeneAudio.Play();
+        RodeAudio.Play();
         //AudioSource.PlayClipAtPoint(clip, position);
     }
-
     public void Pause()
     {
-
-        GroeneAudio.Stop();
-        zoomm.gisPlaying = false;
+        RodeAudio.Stop();
+        zoomm.rodeBlokjesIsPlaying = false;
     }
-
     void Update()
     {
-       
-
         if (zoomm.paused)
         {
-            
-           GroeneAudio.Pause();
-
+            RodeAudio.Pause();
         }
         else
         {
-           GroeneAudio.UnPause();
+            RodeAudio.UnPause();
         }
-        
+
     }
 }
+
