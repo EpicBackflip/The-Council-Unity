@@ -67,8 +67,6 @@ public class CameraZoomComponent : MonoBehaviour
 
     public void Update()
     {
-       
-
         if (!paused)
         {
             timer += Time.deltaTime;
@@ -87,11 +85,6 @@ public class CameraZoomComponent : MonoBehaviour
         if (targetIndex > target.Length - 1)
             return;
 
-        //if (cam.orthographicSize < target[targetIndex].z + zoomInMargin)
-        //{
-        //    isZoomActive = false;
-        //}
-
         if (!isZoomActive && cam.orthographicSize > baseCameraSize - zoomOutMargin)
         {
            NextTarget();
@@ -99,7 +92,7 @@ public class CameraZoomComponent : MonoBehaviour
 
         if (isZoomActive && targetIndex == 0 && !gisPlaying)
         {
-            Console.WriteLine("hit");
+            //Console.WriteLine("hit");
             gisPlaying = true;
             groenblokjes.Play();
             rodeblokjes.Pause();
@@ -107,8 +100,6 @@ public class CameraZoomComponent : MonoBehaviour
             kaarten.Pause();
             wijken.Pause();
             krediet.Pause();
-
-
         }
 
         if (isZoomActive && targetIndex == 1 && !risPlaying)
@@ -121,13 +112,10 @@ public class CameraZoomComponent : MonoBehaviour
             kaarten.Pause();
             wijken.Pause();
             krediet.Pause();
-
-
         }
 
         if (isZoomActive && targetIndex == 2 && !bisPlaying)
         {
-          
             Console.WriteLine("hit");
             bisPlaying = true;
             bankrun.Play();
@@ -136,8 +124,6 @@ public class CameraZoomComponent : MonoBehaviour
             kaarten.Pause();
             wijken.Pause();
             krediet.Pause();
-
-
         }
 
         if (isZoomActive && targetIndex == 3 && !kaartisPlaying)
@@ -150,7 +136,6 @@ public class CameraZoomComponent : MonoBehaviour
             bankrun.Pause();
             wijken.Pause();
             krediet.Pause();
-
         }
 
         if (isZoomActive && targetIndex == 4 && !wijkenisPlaying)
@@ -163,7 +148,6 @@ public class CameraZoomComponent : MonoBehaviour
             bankrun.Pause();
             kaarten.Pause();
             krediet.Pause();
-
         }
 
         if (isZoomActive && targetIndex == 5 && !kisPlaying)
@@ -176,15 +160,7 @@ public class CameraZoomComponent : MonoBehaviour
             kaarten.Pause();
             wijken.Pause();
             bankrun.Pause();
-
-
-
         }
-
-
-
-
-
 
         if (isZoomActive && targetIndex < target.Length)
         {
