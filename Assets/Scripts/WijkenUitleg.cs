@@ -27,7 +27,7 @@ public class WijkenUitleg : MonoBehaviour
     {
 
 
-        if (zoomm.paused)
+        if (zoomm.Paused)
         {
 
             WijkenAudio.Pause();

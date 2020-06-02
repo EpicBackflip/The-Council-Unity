@@ -27,7 +27,7 @@ public class Bankrun : MonoBehaviour
     {
 
 
-        if (zoomm.paused)
+        if (zoomm.Paused)
         {
 
             BankrunAudio.Pause();

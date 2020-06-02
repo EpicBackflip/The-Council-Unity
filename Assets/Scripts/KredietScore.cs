@@ -26,7 +26,7 @@ public class KredietScore : MonoBehaviour
     {
 
 
-        if (zoomm.paused)
+        if (zoomm.Paused)
         {
 
             KredietAudio.Pause();

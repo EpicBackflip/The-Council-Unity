@@ -23,7 +23,7 @@ public class RodeBlokjesAudioDelayed : MonoBehaviour
     }
     void Update()
     {
-        if (zoomm.paused)
+        if (zoomm.Paused)
         {
             RodeAudio.Pause();
         }

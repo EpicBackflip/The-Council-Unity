@@ -2152,7 +2152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GroeneAudio: {fileID: 927210435}
-  zoomm: {fileID: 2088213700}
+  zoom: {fileID: 2088213700}
 --- !u!4 &1873903997
 Transform:
   m_ObjectHideFlags: 0
@@ -2434,10 +2434,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1651644549}
   board: {fileID: 465756912}
-  zoomInMargin: 0.001
   zoomOutMargin: 1
   navParent: {fileID: 338583578}
-  paused: 0
   controls: {fileID: 1475641408}
   target:
   - {x: 425, y: 0, z: 150}
@@ -2448,16 +2446,15 @@ MonoBehaviour:
   - {x: 200, y: 240, z: 100}
   zoomSpeed: 0.0225
   timer: 0
-  groenblokjes: {fileID: 1873903996}
-  rodeblokjes: {fileID: 724444714}
+  groenBlokjes: {fileID: 1873903996}
+  rodeBlokjes: {fileID: 724444714}
   bankrun: {fileID: 254075824}
   krediet: {fileID: 870914948}
   kaarten: {fileID: 126593420}
   wijken: {fileID: 1097187144}
-  gisPlaying: 0
-  risPlaying: 0
-  bisPlaying: 0
-  kisPlaying: 0
-  kaartisPlaying: 0
-  wijkenisPlaying: 0
-  timeraudio: 0
+  groeneBlokjesIsPlaying: 0
+  rodeBlokjesIsPlaying: 0
+  bankrunIsPlaying: 0
+  kredietScoreIsPlaying: 0
+  kaartenIsPlaying: 0
+  wijkenIsPlaying: 0

@@ -10,14 +10,14 @@ public class CameraZoomComponent : MonoBehaviour
     public Camera cam;
     public SpriteRenderer board;
     public float zoomOutMargin;
-    
+
     public GameObject navParent;
 
     private int targetIndex = -1;
-    public bool paused;
+    private bool paused;
     private float waitTime = 40f;
 
-    public ControlsTutorial controls; 
+    public ControlsTutorial controls;
 
     private float baseCameraSize;
     private float screenRatio;
@@ -37,6 +37,8 @@ public class CameraZoomComponent : MonoBehaviour
     public KredietScore krediet;
     public KaartenAudio kaarten;
     public WijkenUitleg wijken;
+
+    [HideInInspector]
     public bool groeneBlokjesIsPlaying;
     public bool rodeBlokjesIsPlaying;
     public bool bankrunIsPlaying;
@@ -93,10 +95,9 @@ public class CameraZoomComponent : MonoBehaviour
 
         if (isZoomActive && targetIndex == 0 && !groeneBlokjesIsPlaying)
         {
-            //Console.WriteLine("hit");
-            gisPlaying = true;
-            groenblokjes.Play();
-            rodeblokjes.Pause();
+            groeneBlokjesIsPlaying = true;
+            groenBlokjes.Play();
+            rodeBlokjes.Pause();
             bankrun.Pause();
             kaarten.Pause();
             wijken.Pause();
@@ -105,7 +106,6 @@ public class CameraZoomComponent : MonoBehaviour
 
         if (isZoomActive && targetIndex == 1 && !rodeBlokjesIsPlaying)
         {
-            Console.WriteLine("hit");
             rodeBlokjesIsPlaying = true;
             rodeBlokjes.Play();
             groenBlokjes.Pause();
@@ -117,7 +117,6 @@ public class CameraZoomComponent : MonoBehaviour
 
         if (isZoomActive && targetIndex == 2 && !bankrunIsPlaying)
         {
-            Console.WriteLine("hit");
             bankrunIsPlaying = true;
             bankrun.Play();
             groenBlokjes.Pause();
@@ -129,7 +128,6 @@ public class CameraZoomComponent : MonoBehaviour
 
         if (isZoomActive && targetIndex == 3 && !kaartenIsPlaying)
         {
-            Console.WriteLine("hit");
             kaartenIsPlaying = true;
             kaarten.Play();
             groenBlokjes.Pause();
@@ -141,7 +139,6 @@ public class CameraZoomComponent : MonoBehaviour
 
         if (isZoomActive && targetIndex == 4 && !wijkenIsPlaying)
         {
-            Console.WriteLine("hit");
             wijkenIsPlaying = true;
             wijken.Play();
             groenBlokjes.Pause();
@@ -153,7 +150,6 @@ public class CameraZoomComponent : MonoBehaviour
 
         if (isZoomActive && targetIndex == 5 && !kredietScoreIsPlaying)
         {
-            Console.WriteLine("hit");
             kredietScoreIsPlaying = true;
             krediet.Play();
             groenBlokjes.Pause();

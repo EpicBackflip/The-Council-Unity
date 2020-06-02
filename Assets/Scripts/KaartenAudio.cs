@@ -26,7 +26,7 @@ public class KaartenAudio : MonoBehaviour
     {
 
 
-        if (zoomm.paused)
+        if (zoomm.Paused)
         {
 
             kaartenAudio.Pause();
