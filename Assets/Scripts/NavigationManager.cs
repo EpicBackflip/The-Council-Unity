@@ -31,7 +31,7 @@ public class NavigationManager : MonoBehaviour
         zoom.NextTarget();
     }
 
-    //If the tutorial for the controls is still playing, we dont want the player to skip, pause or return. 
+    // If the tutorial for the controls is still playing, we dont want the player to skip, pause or return. 
     private bool checkIfCanProceed()
     {
         if (!controls.IsFinished)
