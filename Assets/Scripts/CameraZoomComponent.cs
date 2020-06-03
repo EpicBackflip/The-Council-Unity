@@ -40,10 +40,15 @@ public class CameraZoomComponent : MonoBehaviour
 
     [HideInInspector]
     public bool groeneBlokjesIsPlaying;
+    [HideInInspector]
     public bool rodeBlokjesIsPlaying;
+    [HideInInspector]
     public bool bankrunIsPlaying;
+    [HideInInspector]
     public bool kredietScoreIsPlaying;
+    [HideInInspector]
     public bool kaartenIsPlaying;
+    [HideInInspector]
     public bool wijkenIsPlaying;
 
     public bool Paused
@@ -171,8 +176,7 @@ public class CameraZoomComponent : MonoBehaviour
         }
 
         float height = cam.orthographicSize * 2;
-        float width = height * screenRatio; 
-
+        
         navParent.transform.localScale = Vector3.one * height / 525f;
     }
 
