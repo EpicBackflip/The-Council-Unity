@@ -150,8 +150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13548e7fe7910a0418c8017133ef82c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kaartenAudio: {fileID: 996803444}
-  zoomm: {fileID: 2088213700}
+  IsPlaying: 0
+  Audio: {fileID: 0}
+  Zoom: {fileID: 0}
 --- !u!4 &126593421
 Transform:
   m_ObjectHideFlags: 0
@@ -273,8 +274,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a9d8f4953681d0419b966ec86d54293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BankrunAudio: {fileID: 393849117}
-  zoomm: {fileID: 2088213700}
+  IsPlaying: 0
+  Audio: {fileID: 0}
+  Zoom: {fileID: 0}
 --- !u!4 &254075825
 Transform:
   m_ObjectHideFlags: 0
@@ -428,7 +430,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.71999997}
+  m_AnchoredPosition: {x: -678, y: 502}
   m_SizeDelta: {x: 1275, y: 522.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &338583580
@@ -1122,8 +1124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d4bb9853c387e4fa50b80e382432f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RodeAudio: {fileID: 436800721}
-  zoomm: {fileID: 2088213700}
+  IsPlaying: 0
+  Audio: {fileID: 0}
+  Zoom: {fileID: 0}
 --- !u!4 &724444715
 Transform:
   m_ObjectHideFlags: 0
@@ -1311,8 +1314,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0da4b215a6d93543a5ada39b81fb8d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KredietAudio: {fileID: 604334027}
-  zoomm: {fileID: 2088213700}
+  IsPlaying: 0
+  Audio: {fileID: 0}
+  Zoom: {fileID: 0}
 --- !u!4 &870914949
 Transform:
   m_ObjectHideFlags: 0
@@ -1610,8 +1614,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67d1deb4950baff449f7ee8bf2cbd00a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WijkenAudio: {fileID: 1341098607}
-  zoomm: {fileID: 2088213700}
+  IsPlaying: 0
+  Audio: {fileID: 0}
+  Zoom: {fileID: 0}
 --- !u!4 &1097187145
 Transform:
   m_ObjectHideFlags: 0
@@ -2151,8 +2156,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd75d5470807d7a43afac15e14058c27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GroeneAudio: {fileID: 927210435}
-  zoom: {fileID: 2088213700}
+  IsPlaying: 0
+  Audio: {fileID: 0}
+  Zoom: {fileID: 0}
 --- !u!4 &1873903997
 Transform:
   m_ObjectHideFlags: 0
@@ -2446,15 +2452,9 @@ MonoBehaviour:
   - {x: 200, y: 240, z: 100}
   zoomSpeed: 0.0225
   timer: 0
-  groenBlokjes: {fileID: 1873903996}
+  groeneBlokjes: {fileID: 0}
   rodeBlokjes: {fileID: 724444714}
   bankrun: {fileID: 254075824}
   krediet: {fileID: 870914948}
   kaarten: {fileID: 126593420}
   wijken: {fileID: 1097187144}
-  groeneBlokjesIsPlaying: 0
-  rodeBlokjesIsPlaying: 0
-  bankrunIsPlaying: 0
-  kredietScoreIsPlaying: 0
-  kaartenIsPlaying: 0
-  wijkenIsPlaying: 0
