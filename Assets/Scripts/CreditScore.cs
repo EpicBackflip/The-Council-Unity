@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Assets.Scripts;
 using UnityEngine;
 
-public class RodeBlokjesAudioDelayed : BaseExplanationAudio
+public class CreditScore : BaseExplanationAudio
 {
     //public AudioClip clip;
     //public Camera cam;
@@ -17,14 +17,19 @@ public class RodeBlokjesAudioDelayed : BaseExplanationAudio
     }
     public void Pause()
     {
+
         Audio.Stop();
-        Zoom.rodeBlokjes.IsPlaying = false;
+        Zoom.credit.IsPlaying = false;
     }
     void Update()
     {
+
+
         if (Zoom.Paused)
         {
+
             Audio.Pause();
+
         }
         else
         {
@@ -33,4 +38,3 @@ public class RodeBlokjesAudioDelayed : BaseExplanationAudio
 
     }
 }
-

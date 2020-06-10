@@ -33,12 +33,12 @@ public class CameraZoomComponent : MonoBehaviour
     public float timer;
 
     // Audio variables 
-    public GroeneBlokjesAudioDelayed groeneBlokjes;
-    public RodeBlokjesAudioDelayed rodeBlokjes;
+    public GreenBlockAudio greenBlocks;
+    public RedBlockAudio redBlocks;
     public Bankrun bankrun;
-    public KredietScore krediet;
-    public KaartenAudio kaarten;
-    public WijkenUitleg wijken;
+    public CreditScore credit;
+    public CardsAudio cards;
+    public StreetAudio street;
 
     // Pause the game or check if the game is paused
     public bool Paused
@@ -97,27 +97,27 @@ public class CameraZoomComponent : MonoBehaviour
         }
 
         // Play the explanation sound for the groene blokjes & pause the other sounds 
-        if (isZoomActive && targetIndex == 0 && !groeneBlokjes.IsPlaying)
+        if (isZoomActive && targetIndex == 0 && !greenBlocks.IsPlaying)
         {
-            groeneBlokjes.IsPlaying = true;
-            groeneBlokjes.Play();
-            rodeBlokjes.Pause();
+            greenBlocks.IsPlaying = true;
+            greenBlocks.Play();
+            redBlocks.Pause();
             bankrun.Pause();
-            kaarten.Pause();
-            wijken.Pause();
-            krediet.Pause();
+            cards.Pause();
+            street.Pause();
+            credit.Pause();
         }
 
         // Play the explanation sound for the rode blokjes & pause the other sounds 
-        if (isZoomActive && targetIndex == 1 && !rodeBlokjes.IsPlaying)
+        if (isZoomActive && targetIndex == 1 && !redBlocks.IsPlaying)
         {
-            rodeBlokjes.IsPlaying = true;
-            rodeBlokjes.Play();
-            groeneBlokjes.Pause();
+            redBlocks.IsPlaying = true;
+            redBlocks.Play();
+            greenBlocks.Pause();
             bankrun.Pause();
-            kaarten.Pause();
-            wijken.Pause();
-            krediet.Pause();
+            cards.Pause();
+            street.Pause();
+            credit.Pause();
         }
 
         // Play the explanation sound for the bankrun & pause the other sounds 
@@ -125,46 +125,46 @@ public class CameraZoomComponent : MonoBehaviour
         {
             bankrun.IsPlaying = true;
             bankrun.Play();
-            groeneBlokjes.Pause();
-            rodeBlokjes.Pause();
-            kaarten.Pause();
-            wijken.Pause();
-            krediet.Pause();
+            greenBlocks.Pause();
+            redBlocks.Pause();
+            cards.Pause();
+            street.Pause();
+            credit.Pause();
         }
 
-        // Play the explanation sound for the kaarten & pause the other sounds 
-        if (isZoomActive && targetIndex == 3 && !kaarten.IsPlaying)
+        // Play the explanation sound for the cards & pause the other sounds 
+        if (isZoomActive && targetIndex == 3 && !cards.IsPlaying)
         {
-            kaarten.IsPlaying = true;
-            kaarten.Play();
-            groeneBlokjes.Pause();
-            rodeBlokjes.Pause();
+            cards.IsPlaying = true;
+            cards.Play();
+            greenBlocks.Pause();
+            redBlocks.Pause();
             bankrun.Pause();
-            wijken.Pause();
-            krediet.Pause();
+            street.Pause();
+            credit.Pause();
         }
 
-        // Play the explanation sound for the wijken & pause the other sounds 
-        if (isZoomActive && targetIndex == 4 && !wijken.IsPlaying)
+        // Play the explanation sound for the street & pause the other sounds 
+        if (isZoomActive && targetIndex == 4 && !street.IsPlaying)
         {
-            wijken.IsPlaying = true;
-            wijken.Play();
-            groeneBlokjes.Pause();
-            rodeBlokjes.Pause();
+            street.IsPlaying = true;
+            street.Play();
+            greenBlocks.Pause();
+            redBlocks.Pause();
             bankrun.Pause();
-            kaarten.Pause();
-            krediet.Pause();
+            cards.Pause();
+            credit.Pause();
         }
 
-        // Play the explanation sound for the krediet & pause the other sounds 
-        if (isZoomActive && targetIndex == 5 && !krediet.IsPlaying)
+        // Play the explanation sound for the credit & pause the other sounds 
+        if (isZoomActive && targetIndex == 5 && !credit.IsPlaying)
         {
-            krediet.IsPlaying = true;
-            krediet.Play();
-            groeneBlokjes.Pause();
-            rodeBlokjes.Pause();
-            kaarten.Pause();
-            wijken.Pause();
+            credit.IsPlaying = true;
+            credit.Play();
+            greenBlocks.Pause();
+            redBlocks.Pause();
+            cards.Pause();
+            street.Pause();
             bankrun.Pause();
         }
 

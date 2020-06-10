@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Assets.Scripts;
 using UnityEngine;
 
-public class KredietScore : BaseExplanationAudio
+public class StreetAudio : BaseExplanationAudio
 {
     //public AudioClip clip;
     //public Camera cam;
@@ -15,11 +15,12 @@ public class KredietScore : BaseExplanationAudio
         Audio.Play();
         //AudioSource.PlayClipAtPoint(clip, position);
     }
+
     public void Pause()
     {
 
         Audio.Stop();
-        Zoom.krediet.IsPlaying = false;
+        Zoom.street.IsPlaying = false;
     }
     void Update()
     {

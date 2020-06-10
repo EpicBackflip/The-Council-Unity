@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Assets.Scripts;
 using UnityEngine;
 
-public class KaartenAudio : BaseExplanationAudio
+public class GreenBlockAudio : BaseExplanationAudio
 {
     //public AudioClip clip;
     //public Camera cam;
@@ -15,26 +15,24 @@ public class KaartenAudio : BaseExplanationAudio
         Audio.Play();
         //AudioSource.PlayClipAtPoint(clip, position);
     }
+
     public void Pause()
     {
 
         Audio.Stop();
-        Zoom.kaarten.IsPlaying = false;
+        Zoom.greenBlocks.IsPlaying = false;
     }
+
     void Update()
     {
-
-
         if (Zoom.Paused)
-        {
-
+        { 
             Audio.Pause();
-
         }
         else
         {
-            Audio.UnPause();
+           Audio.UnPause();
         }
-
+        
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Assets.Scripts;
 using UnityEngine;
 
-public class GroeneBlokjesAudioDelayed : BaseExplanationAudio
+public class RedBlockAudio : BaseExplanationAudio
 {
     //public AudioClip clip;
     //public Camera cam;
@@ -15,24 +15,22 @@ public class GroeneBlokjesAudioDelayed : BaseExplanationAudio
         Audio.Play();
         //AudioSource.PlayClipAtPoint(clip, position);
     }
-
     public void Pause()
     {
-
         Audio.Stop();
-        Zoom.groeneBlokjes.IsPlaying = false;
+        Zoom.redBlocks.IsPlaying = false;
     }
-
     void Update()
     {
         if (Zoom.Paused)
-        { 
+        {
             Audio.Pause();
         }
         else
         {
-           Audio.UnPause();
+            Audio.UnPause();
         }
-        
+
     }
 }
+

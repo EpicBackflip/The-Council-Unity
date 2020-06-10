@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Assets.Scripts;
 using UnityEngine;
 
-public class WijkenUitleg : BaseExplanationAudio
+public class CardsAudio : BaseExplanationAudio
 {
     //public AudioClip clip;
     //public Camera cam;
@@ -15,12 +15,11 @@ public class WijkenUitleg : BaseExplanationAudio
         Audio.Play();
         //AudioSource.PlayClipAtPoint(clip, position);
     }
-
     public void Pause()
     {
 
         Audio.Stop();
-        Zoom.wijken.IsPlaying = false;
+        Zoom.cards.IsPlaying = false;
     }
     void Update()
     {
