@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Assets.Scripts;
 using UnityEngine;
 
-public class GroeneBlokjesAudioDelayed : BaseExplanationAudio
+public class GroeneBlokjesAudioDelayed : MonoBehaviour
 {
+    public AudioSource GroeneAudio;
+    public CameraZoomComponent zoom;
     //public AudioClip clip;
     //public Camera cam;
     // private Vector3 position = new Vector3(427, -5, -1);
@@ -12,26 +13,26 @@ public class GroeneBlokjesAudioDelayed : BaseExplanationAudio
 
     public void Play()
     {
-        Audio.Play();
+        GroeneAudio.Play();
         //AudioSource.PlayClipAtPoint(clip, position);
     }
 
     public void Pause()
     {
 
-        Audio.Stop();
-        Zoom.groeneBlokjes.IsPlaying = false;
+        GroeneAudio.Stop();
+        zoom.groeneBlokjesIsPlaying = false;
     }
 
     void Update()
     {
-        if (Zoom.Paused)
-        { 
-            Audio.Pause();
+        if (zoom.Paused)
+        {
+            GroeneAudio.Pause();
         }
         else
         {
-           Audio.UnPause();
+           GroeneAudio.UnPause();
         }
         
     }
