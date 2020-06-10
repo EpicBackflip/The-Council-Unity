@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Assets.Scripts;
 using UnityEngine;
 
-public class KaartenAudio : BaseExplanationAudio
+public class KaartenAudio : MonoBehaviour
 {
+    public AudioSource kaartenAudio;
+    public CameraZoomComponent zoomm;
     //public AudioClip clip;
     //public Camera cam;
     // private Vector3 position = new Vector3(427, -5, -1);
@@ -12,28 +13,28 @@ public class KaartenAudio : BaseExplanationAudio
 
     public void Play()
     {
-        Audio.Play();
+        kaartenAudio.Play();
         //AudioSource.PlayClipAtPoint(clip, position);
     }
     public void Pause()
     {
 
-        Audio.Stop();
-        Zoom.kaarten.IsPlaying = false;
+        kaartenAudio.Stop();
+        zoomm.kaartenIsPlaying = false;
     }
     void Update()
     {
 
 
-        if (Zoom.Paused)
+        if (zoomm.Paused)
         {
 
-            Audio.Pause();
+            kaartenAudio.Pause();
 
         }
         else
         {
-            Audio.UnPause();
+            kaartenAudio.UnPause();
         }
 
     }

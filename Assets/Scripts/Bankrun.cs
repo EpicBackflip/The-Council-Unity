@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Assets.Scripts;
 using UnityEngine;
 
-public class Bankrun : BaseExplanationAudio
+public class Bankrun : MonoBehaviour
 {
+    public AudioSource BankrunAudio;
+    public CameraZoomComponent zoomm;
     //public AudioClip clip;
     //public Camera cam;
     // private Vector3 position = new Vector3(427, -5, -1);
@@ -12,29 +13,29 @@ public class Bankrun : BaseExplanationAudio
 
     public void Play()
     {
-        Audio.Play();
+        BankrunAudio.Play();
         //AudioSource.PlayClipAtPoint(clip, position);
     }
     public void Pause()
     {
 
-        Audio.Stop();
-        Zoom.bankrun.IsPlaying = false;
+        BankrunAudio.Stop();
+        zoomm.bankrunIsPlaying = false;
     }
 
     void Update()
     {
 
 
-        if (Zoom.Paused)
+        if (zoomm.Paused)
         {
 
-            Audio.Pause();
+            BankrunAudio.Pause();
 
         }
         else
         {
-            Audio.UnPause();
+            BankrunAudio.UnPause();
         }
 
     }
