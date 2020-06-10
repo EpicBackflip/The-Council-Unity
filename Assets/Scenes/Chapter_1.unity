@@ -151,8 +151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsPlaying: 0
-  Audio: {fileID: 0}
-  Zoom: {fileID: 0}
+  Audio: {fileID: 996803444}
+  Zoom: {fileID: 2088213700}
 --- !u!4 &126593421
 Transform:
   m_ObjectHideFlags: 0
@@ -275,8 +275,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsPlaying: 0
-  Audio: {fileID: 0}
-  Zoom: {fileID: 0}
+  Audio: {fileID: 393849117}
+  Zoom: {fileID: 2088213700}
 --- !u!4 &254075825
 Transform:
   m_ObjectHideFlags: 0
@@ -1125,8 +1125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsPlaying: 0
-  Audio: {fileID: 0}
-  Zoom: {fileID: 0}
+  Audio: {fileID: 436800721}
+  Zoom: {fileID: 2088213700}
 --- !u!4 &724444715
 Transform:
   m_ObjectHideFlags: 0
@@ -1315,8 +1315,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsPlaying: 0
-  Audio: {fileID: 0}
-  Zoom: {fileID: 0}
+  Audio: {fileID: 604334027}
+  Zoom: {fileID: 2088213700}
 --- !u!4 &870914949
 Transform:
   m_ObjectHideFlags: 0
@@ -1615,8 +1615,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsPlaying: 0
-  Audio: {fileID: 0}
-  Zoom: {fileID: 0}
+  Audio: {fileID: 1341098607}
+  Zoom: {fileID: 2088213700}
 --- !u!4 &1097187145
 Transform:
   m_ObjectHideFlags: 0
@@ -2157,8 +2157,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsPlaying: 0
-  Audio: {fileID: 0}
-  Zoom: {fileID: 0}
+  Audio: {fileID: 927210435}
+  Zoom: {fileID: 2088213700}
 --- !u!4 &1873903997
 Transform:
   m_ObjectHideFlags: 0
@@ -2452,7 +2452,7 @@ MonoBehaviour:
   - {x: 200, y: 240, z: 100}
   zoomSpeed: 0.0225
   timer: 0
-  groeneBlokjes: {fileID: 0}
+  groeneBlokjes: {fileID: 1873903996}
   rodeBlokjes: {fileID: 724444714}
   bankrun: {fileID: 254075824}
   krediet: {fileID: 870914948}
