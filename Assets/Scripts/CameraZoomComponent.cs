@@ -1,22 +1,20 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.Specialized;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraZoomComponent : MonoBehaviour
 {
     public Camera cam;
     public SpriteRenderer board;
-
-    // This is used to change the duration when zoomed-in on a target
     public float zoomOutMargin;
 
     public GameObject navParent;
 
-    // Indicates the current target 
     private int targetIndex = -1;
-
-    // Indicates if the game is paused or not
     private bool paused;
-
-    // Max time that we are zoomed-in
     private float waitTime = 40f;
 
     public ControlsTutorial controls;
@@ -33,14 +31,26 @@ public class CameraZoomComponent : MonoBehaviour
     public float timer;
 
     // Audio variables 
-    public GroeneBlokjesAudioDelayed groeneBlokjes;
+    public GroeneBlokjesAudioDelayed groenBlokjes;
     public RodeBlokjesAudioDelayed rodeBlokjes;
     public Bankrun bankrun;
     public KredietScore krediet;
     public KaartenAudio kaarten;
     public WijkenUitleg wijken;
 
-    // Pause the game or check if the game is paused
+    [HideInInspector]
+    public bool groeneBlokjesIsPlaying;
+    [HideInInspector]
+    public bool rodeBlokjesIsPlaying;
+    [HideInInspector]
+    public bool bankrunIsPlaying;
+    [HideInInspector]
+    public bool kredietScoreIsPlaying;
+    [HideInInspector]
+    public bool kaartenIsPlaying;
+    [HideInInspector]
+    public bool wijkenIsPlaying;
+
     public bool Paused
     {
         get { return paused; }
@@ -65,42 +75,33 @@ public class CameraZoomComponent : MonoBehaviour
 
     public void Update()
     {
-        // If the game is not paused, update the timer
         if (!paused)
         {
             timer += Time.deltaTime;
         }
-
-        // If the timer exceeds the wait time, stop zooming
         if (timer > waitTime)
         {
             isZoomActive = false;
             timer = 0;
         }
 
-        // If the game is paused or the tutorial is playing, don't do anything
         if (paused || !controls.IsFinished)
         {
             return;
         }
 
-        // If the current target is more then the max amount of targets, don't do anything
         if (targetIndex > target.Length - 1)
-        {
             return;
-        }
 
-        // If we have reached the max zoom of the current target, go to the next target 
         if (!isZoomActive && cam.orthographicSize > baseCameraSize - zoomOutMargin)
         {
            NextTarget();
         }
 
-        // Play the explanation sound for the groene blokjes & pause the other sounds 
-        if (isZoomActive && targetIndex == 0 && !groeneBlokjes.IsPlaying)
+        if (isZoomActive && targetIndex == 0 && !groeneBlokjesIsPlaying)
         {
-            groeneBlokjes.IsPlaying = true;
-            groeneBlokjes.Play();
+            groeneBlokjesIsPlaying = true;
+            groenBlokjes.Play();
             rodeBlokjes.Pause();
             bankrun.Pause();
             kaarten.Pause();
@@ -108,60 +109,55 @@ public class CameraZoomComponent : MonoBehaviour
             krediet.Pause();
         }
 
-        // Play the explanation sound for the rode blokjes & pause the other sounds 
-        if (isZoomActive && targetIndex == 1 && !rodeBlokjes.IsPlaying)
+        if (isZoomActive && targetIndex == 1 && !rodeBlokjesIsPlaying)
         {
-            rodeBlokjes.IsPlaying = true;
+            rodeBlokjesIsPlaying = true;
             rodeBlokjes.Play();
-            groeneBlokjes.Pause();
+            groenBlokjes.Pause();
             bankrun.Pause();
             kaarten.Pause();
             wijken.Pause();
             krediet.Pause();
         }
 
-        // Play the explanation sound for the bankrun & pause the other sounds 
-        if (isZoomActive && targetIndex == 2 && !bankrun.IsPlaying)
+        if (isZoomActive && targetIndex == 2 && !bankrunIsPlaying)
         {
-            bankrun.IsPlaying = true;
+            bankrunIsPlaying = true;
             bankrun.Play();
-            groeneBlokjes.Pause();
+            groenBlokjes.Pause();
             rodeBlokjes.Pause();
             kaarten.Pause();
             wijken.Pause();
             krediet.Pause();
         }
 
-        // Play the explanation sound for the kaarten & pause the other sounds 
-        if (isZoomActive && targetIndex == 3 && !kaarten.IsPlaying)
+        if (isZoomActive && targetIndex == 3 && !kaartenIsPlaying)
         {
-            kaarten.IsPlaying = true;
+            kaartenIsPlaying = true;
             kaarten.Play();
-            groeneBlokjes.Pause();
+            groenBlokjes.Pause();
             rodeBlokjes.Pause();
             bankrun.Pause();
             wijken.Pause();
             krediet.Pause();
         }
 
-        // Play the explanation sound for the wijken & pause the other sounds 
-        if (isZoomActive && targetIndex == 4 && !wijken.IsPlaying)
+        if (isZoomActive && targetIndex == 4 && !wijkenIsPlaying)
         {
-            wijken.IsPlaying = true;
+            wijkenIsPlaying = true;
             wijken.Play();
-            groeneBlokjes.Pause();
+            groenBlokjes.Pause();
             rodeBlokjes.Pause();
             bankrun.Pause();
             kaarten.Pause();
             krediet.Pause();
         }
 
-        // Play the explanation sound for the krediet & pause the other sounds 
-        if (isZoomActive && targetIndex == 5 && !krediet.IsPlaying)
+        if (isZoomActive && targetIndex == 5 && !kredietScoreIsPlaying)
         {
-            krediet.IsPlaying = true;
+            kredietScoreIsPlaying = true;
             krediet.Play();
-            groeneBlokjes.Pause();
+            groenBlokjes.Pause();
             rodeBlokjes.Pause();
             kaarten.Pause();
             wijken.Pause();
@@ -170,7 +166,6 @@ public class CameraZoomComponent : MonoBehaviour
 
         if (isZoomActive && targetIndex < target.Length)
         {
-            // We know how far we can zoom-in by using the z-component & we can set the targets x and y positions
             cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, target[targetIndex].z, zoomSpeed);
             cam.transform.position = Vector3.Lerp(cam.transform.position, new Vector3(target[targetIndex].x, target[targetIndex].y, -1), zoomSpeed);
         }
@@ -185,7 +180,6 @@ public class CameraZoomComponent : MonoBehaviour
         navParent.transform.localScale = Vector3.one * height / 525f;
     }
 
-    // Go to the next target. If there are no targets left, go to next scene
     public void NextTarget()
     {
         isZoomActive = true;
@@ -197,7 +191,6 @@ public class CameraZoomComponent : MonoBehaviour
         }
     }
 
-    // Go to the previous target. If there are no targets left, go to previous scene
     public bool PreviousTarget()
     {
         if (targetIndex == 0)
