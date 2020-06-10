@@ -13,17 +13,16 @@ public class SchuldText : MonoBehaviour
 
     void Awake()
     {
+        //get the string from the SchuldInput scene
         schuldinput.StringInput = PlayerPrefs.GetString("tutorialTextKeyName");
         schuldinput.mainInputField.text = schuldinput.StringInput;
         schuldText.text = schuldinput.mainInputField.text;
-
+        // this turns the string into an int
         displaySchuld = int.Parse(schuldText.text);
-
-        //totalScore = score.CoinScore;
     }
     void Update()
     {
-            //displaySchuld--;
-            schuldText.text = displaySchuld.ToString();
+        // this turns the int back into a string to be displayed
+        schuldText.text = displaySchuld.ToString();
     }
 }

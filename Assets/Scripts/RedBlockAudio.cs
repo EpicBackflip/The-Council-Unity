@@ -5,27 +5,26 @@ using UnityEngine;
 
 public class RedBlockAudio : BaseExplanationAudio
 {
-    //public AudioClip clip;
-    //public Camera cam;
-    // private Vector3 position = new Vector3(427, -5, -1);
-
-
     public void Play()
     {
+        //this is where the audio gets played
         Audio.Play();
-        //AudioSource.PlayClipAtPoint(clip, position);
     }
     public void Pause()
     {
+        //this is where the audio get's stopped
         Audio.Stop();
         Zoom.redBlocks.IsPlaying = false;
     }
     void Update()
     {
+        //when the camera zoom is paused the audio will be paused aswell
         if (Zoom.Paused)
         {
             Audio.Pause();
         }
+
+        //when the camera zoom is unpaused the audio will be unpaused aswell
         else
         {
             Audio.UnPause();

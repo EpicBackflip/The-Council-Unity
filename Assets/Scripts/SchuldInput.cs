@@ -12,16 +12,13 @@ public class SchuldInput : MonoBehaviour
 
     public void Awake()
     {
-        //Adds a listener to the main input field and invokes a method when the value changes.
-        //StringInput = mainInputField.text;
-        //mainInputField.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
+        // this is where the name of the string is set and the stringinput will wait for the input
         StringInput = PlayerPrefs.GetString("tutorialTextKeyName");
         mainInputField.text = StringInput;
-        Debug.Log(mainInputField.text);
     }
     public void Savethis()
     {
-       
+        // set the stringinput to be the string that is put into the SchuldInput
         StringInput = mainInputField.text;
         PlayerPrefs.SetString("tutorialTextKeyName", StringInput);
     }
