@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts;
 using UnityEngine;
 
-public class WijkenUitleg : MonoBehaviour
+public class WijkenUitleg : BaseExplanationAudio
 {
-    public AudioSource WijkenAudio;
-    public CameraZoomComponent zoomm;
     //public AudioClip clip;
     //public Camera cam;
     // private Vector3 position = new Vector3(427, -5, -1);
@@ -13,29 +12,29 @@ public class WijkenUitleg : MonoBehaviour
 
     public void Play()
     {
-        WijkenAudio.Play();
+        Audio.Play();
         //AudioSource.PlayClipAtPoint(clip, position);
     }
 
     public void Pause()
     {
 
-        WijkenAudio.Stop();
-        zoomm.wijkenIsPlaying = false;
+        Audio.Stop();
+        Zoom.wijken.IsPlaying = false;
     }
     void Update()
     {
 
 
-        if (zoomm.Paused)
+        if (Zoom.Paused)
         {
 
-            WijkenAudio.Pause();
+            Audio.Pause();
 
         }
         else
         {
-            WijkenAudio.UnPause();
+            Audio.UnPause();
         }
 
     }

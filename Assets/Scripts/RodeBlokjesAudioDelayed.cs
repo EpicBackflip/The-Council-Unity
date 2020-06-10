@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts;
 using UnityEngine;
 
-public class RodeBlokjesAudioDelayed : MonoBehaviour
+public class RodeBlokjesAudioDelayed : BaseExplanationAudio
 {
-    public AudioSource RodeAudio;
-    public CameraZoomComponent zoomm;
     //public AudioClip clip;
     //public Camera cam;
     // private Vector3 position = new Vector3(427, -5, -1);
@@ -13,23 +12,23 @@ public class RodeBlokjesAudioDelayed : MonoBehaviour
 
     public void Play()
     {
-        RodeAudio.Play();
+        Audio.Play();
         //AudioSource.PlayClipAtPoint(clip, position);
     }
     public void Pause()
     {
-        RodeAudio.Stop();
-        zoomm.rodeBlokjesIsPlaying = false;
+        Audio.Stop();
+        Zoom.rodeBlokjes.IsPlaying = false;
     }
     void Update()
     {
-        if (zoomm.Paused)
+        if (Zoom.Paused)
         {
-            RodeAudio.Pause();
+            Audio.Pause();
         }
         else
         {
-            RodeAudio.UnPause();
+            Audio.UnPause();
         }
 
     }

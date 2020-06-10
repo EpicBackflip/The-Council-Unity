@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts;
 using UnityEngine;
 
-public class KredietScore : MonoBehaviour
+public class KredietScore : BaseExplanationAudio
 {
-    public AudioSource KredietAudio;
-    public CameraZoomComponent zoomm;
     //public AudioClip clip;
     //public Camera cam;
     // private Vector3 position = new Vector3(427, -5, -1);
@@ -13,28 +12,28 @@ public class KredietScore : MonoBehaviour
 
     public void Play()
     {
-        KredietAudio.Play();
+        Audio.Play();
         //AudioSource.PlayClipAtPoint(clip, position);
     }
     public void Pause()
     {
 
-        KredietAudio.Stop();
-        zoomm.kredietScoreIsPlaying = false;
+        Audio.Stop();
+        Zoom.krediet.IsPlaying = false;
     }
     void Update()
     {
 
 
-        if (zoomm.Paused)
+        if (Zoom.Paused)
         {
 
-            KredietAudio.Pause();
+            Audio.Pause();
 
         }
         else
         {
-            KredietAudio.UnPause();
+            Audio.UnPause();
         }
 
     }
