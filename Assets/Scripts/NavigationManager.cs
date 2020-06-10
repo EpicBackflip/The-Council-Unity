@@ -46,5 +46,3 @@ public class NavigationManager : MonoBehaviour
         return controls.IsFinished;
     }
 }
-
-// Rinske's code

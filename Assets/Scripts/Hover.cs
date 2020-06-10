@@ -22,5 +22,3 @@ public class Hover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         panel.color = new Color(0,0,0,0);
     }
 }
-
-//Rinske's code
