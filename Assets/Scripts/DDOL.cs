@@ -12,7 +12,5 @@ public class DDOL : MonoBehaviour
         timer++;
         DontDestroyOnLoad(gameObject);
         Debug.Log("DDOL"+gameObject.name);
-    
-
     }
 }
