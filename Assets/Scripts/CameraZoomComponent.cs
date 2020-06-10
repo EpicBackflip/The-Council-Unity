@@ -96,7 +96,7 @@ public class CameraZoomComponent : MonoBehaviour
            NextTarget();
         }
 
-        // Play the explanation sound for the groene blokjes & pause the other sounds 
+        // Play the explanation sound for the green blocks & pause the other sounds 
         if (isZoomActive && targetIndex == 0 && !greenBlocks.IsPlaying)
         {
             greenBlocks.IsPlaying = true;
@@ -108,7 +108,7 @@ public class CameraZoomComponent : MonoBehaviour
             credit.Pause();
         }
 
-        // Play the explanation sound for the rode blokjes & pause the other sounds 
+        // Play the explanation sound for the red blocks & pause the other sounds 
         if (isZoomActive && targetIndex == 1 && !redBlocks.IsPlaying)
         {
             redBlocks.IsPlaying = true;

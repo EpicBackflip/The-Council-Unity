@@ -147,7 +147,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 126593419}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13548e7fe7910a0418c8017133ef82c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 66edee77295f87b4b9c793d5e1586290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsPlaying: 0
@@ -1121,7 +1121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 724444713}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81d4bb9853c387e4fa50b80e382432f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 90c1971656d75b84b907252218dd9415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsPlaying: 0
@@ -1311,7 +1311,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 870914947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0da4b215a6d93543a5ada39b81fb8d6, type: 3}
+  m_Script: {fileID: 11500000, guid: cf550e90909e87847ac06568d971a2f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsPlaying: 0
@@ -1611,7 +1611,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1097187143}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d1deb4950baff449f7ee8bf2cbd00a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b6af821576452a4db958fc31df128e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsPlaying: 0
@@ -2153,7 +2153,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1873903995}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd75d5470807d7a43afac15e14058c27, type: 3}
+  m_Script: {fileID: 11500000, guid: ba20d17b763a47e48b797293de80257d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   IsPlaying: 0
@@ -2452,9 +2452,9 @@ MonoBehaviour:
   - {x: 200, y: 240, z: 100}
   zoomSpeed: 0.0225
   timer: 0
-  groeneBlokjes: {fileID: 1873903996}
-  rodeBlokjes: {fileID: 724444714}
+  greenBlocks: {fileID: 1873903996}
+  redBlocks: {fileID: 724444714}
   bankrun: {fileID: 254075824}
-  krediet: {fileID: 870914948}
-  kaarten: {fileID: 126593420}
-  wijken: {fileID: 1097187144}
+  credit: {fileID: 870914948}
+  cards: {fileID: 126593420}
+  street: {fileID: 1097187144}
