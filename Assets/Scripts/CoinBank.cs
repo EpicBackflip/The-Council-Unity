@@ -9,18 +9,18 @@ public class CoinBank : MonoBehaviour
 
     void OnMouseDown()
     {
-        //hier zorg je ervoor dat wanneer je op de coinbank klikt de position veranderd kan worden.
+        //when the coinbank is pressed you enable the position to be changed.
         screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
     }
 
     void OnMouseDrag()
     { 
-        //wanneer de muis wordt ingehouden wordt de position van coinbank gelijk gezet aan de x positie van de muis.
+        //when the mouse is dragged the position will be changed according to the x position of the mouse.
         Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, screenPoint.y, screenPoint.z);
         Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint);
         transform.position = curPosition;
 
-        //hier wordt de positie gesrestrained wanneer de conibank de randen van het scherm raakt.
+        //when the coinbank reaches the end of the screen the position will be restrained.
         if (transform.position.x >= 8)
         {
            transform.position = new Vector3(8, -3.63f, 0);
