@@ -185,9 +185,10 @@ public class CameraZoomComponent : MonoBehaviour
             cam.transform.position = Vector3.Lerp(cam.transform.position, new Vector3(0,0,-1), zoomSpeed);
         }
 
-        //Ortho size is half of the camera 's volume, multiply by two to get the height
+        //orthoSize is half of the viewing volume size, multiply by two to get visible area height
         float height = cam.orthographicSize * 2;
         
+        //Scale the gameObject 1/525 the height of the camera
         navParent.transform.localScale = Vector3.one * height / 525f;
     }
 

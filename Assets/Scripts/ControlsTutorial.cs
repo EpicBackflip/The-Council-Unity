@@ -71,7 +71,7 @@ public class ControlsTutorial : MonoBehaviour
             //If we hit 0 opacity, we completed one full blink cycle
             if (tempColor.a <= 0f)
             {
-                //To increase the opacity next update
+                //Increase the opacity next update
                 hasBlinked = false;
                 blinkCount++;
             }
