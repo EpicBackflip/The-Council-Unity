@@ -7,9 +7,9 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public Text timerText;
-    public float timer = 30f;
+    private float timer = 30f;
 
-    public void Update()
+    private void Update()
     {
         // this is a timer that counts down based on the time in seconds
         timer -= Time.deltaTime;

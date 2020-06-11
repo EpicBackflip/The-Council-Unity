@@ -17,7 +17,7 @@ public class CreditScore : BaseExplanationAudio
         Audio.Stop();
         Zoom.credit.IsPlaying = false;
     }
-    void Update()
+    private void Update()
     {
         //when the camera zoom is paused the audio will be paused aswell
         if (Zoom.Paused)

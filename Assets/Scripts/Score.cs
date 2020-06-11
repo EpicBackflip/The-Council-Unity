@@ -9,14 +9,7 @@ public class Score : MonoBehaviour
 
     public Text scoreText;
     public int CoinScore;
-    public string StringInput;
-    public void Awake()
-    {
-        // this is where the name of the string is set and the stringinput will wait for the input
-        StringInput = PlayerPrefs.GetString("Score");
-    }
-
-public void Update()
+    private void Update()
     {
         // this turns the coinscore into a string to be displayed
         scoreText.text = CoinScore.ToString();

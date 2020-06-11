@@ -919,9 +919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34c1d61305c12bc4a9dd83b313da34bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 1738794389}
-  ScoreInput: 
-  CoinScore: 0
+  scoreTextMiniGameOVer: {fileID: 1738794389}
 --- !u!1 &1754387268
 GameObject:
   m_ObjectHideFlags: 0
