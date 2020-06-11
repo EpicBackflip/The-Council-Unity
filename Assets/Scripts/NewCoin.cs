@@ -6,11 +6,10 @@ using UnityEngine.UI;
 public class NewCoin : MonoBehaviour
 {
     public Score score;
-    public SchuldInput schuldinput;
-    public  float movementSpeed = 20f;
-    public bool isHit; 
+    private float movementSpeed = 20f;
+    private bool isHit; 
 
-    public void Update()
+    private void Update()
     {
         // this allows you to modify the Y position of the coin's position
         float inputY = Input.GetAxis("Vertical");
@@ -23,7 +22,7 @@ public class NewCoin : MonoBehaviour
         }
         
     }
-    public void Reset()
+    private void Reset()
     {
         // this resets the position back to the top of the screen with random values
         isHit = false; 
