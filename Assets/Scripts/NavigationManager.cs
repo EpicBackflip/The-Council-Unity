@@ -4,6 +4,7 @@ public class NavigationManager : MonoBehaviour
 {
     // Used to switch the current target
     public CameraZoomComponent zoom;
+
     // Check if the tutorial is currently running 
     public ControlsTutorial controls;
 
