@@ -47,18 +47,18 @@ public class CameraZoomComponent : MonoBehaviour
         set { paused = value; }
     }
 
-    //This makes sure the board is the right size no matter what aspect ratio
+    // This makes sure the board is the right size no matter what aspect ratio
     public void Start()
     {
         screenRatio = (float)Screen.width / Screen.height;
 
-        //Calculate the size of our board
+        // Calculate the size of our board
         float targetRatio = board.bounds.size.x / board.bounds.size.y;
 
-        //If the screenRatio is larger or equal to the ratio of the board
+        // If the screenRatio is larger or equal to the ratio of the board
         if (screenRatio >= targetRatio)
         {
-            //Set the camera to half the size of the board height
+            // Set the camera to half the size of the board height
             baseCameraSize = board.bounds.size.y / 2;
         }
         else
@@ -185,10 +185,10 @@ public class CameraZoomComponent : MonoBehaviour
             cam.transform.position = Vector3.Lerp(cam.transform.position, new Vector3(0,0,-1), zoomSpeed);
         }
 
-        //orthoSize is half of the viewing volume size, multiply by two to get visible area height
+        // orthoSize is half of the viewing volume size, multiply by two to get visible area height
         float height = cam.orthographicSize * 2;
         
-        //Scale the gameObject 1/525 the height of the camera
+        // Scale the gameObject 1/525 the height of the camera
         navParent.transform.localScale = Vector3.one * height / 525f;
     }
 
